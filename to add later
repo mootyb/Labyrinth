@@ -1,0 +1,48 @@
+<div class="form-group{{#if afFieldIsInvalid name='labyrinth'}} has-error{{/if}}">
+    {{> afFieldInput name='labyrinth'}}
+    {{#if afFieldIsInvalid name='labyrinth'}}
+        <span class="help-block">There is no existing labyrinth with this name. Please check the name again or create a new labyrinth</span>
+    {{/if}}
+</div>
+
+
+
+<head>
+    <meta charset="UTF-8">
+  <title>labyrinth</title>
+</head>
+
+<body>
+  {{> register}}
+ </body>
+
+<template name="register">
+    <h2>Book your place in the labyrinth</h2>
+    <form class="register">
+        <p>Name: <input type="text" name="Name"></p>
+        <p>Email: <input type="email" name="Email"></p>
+        <p>Phone: <input type="tel" name="Phone number"></p>
+        <p>Time: <input type="time" name="Time"></p>
+        <p><input type="submit" value="Book time"></p>
+    </form>
+</template>
+
+meteor npm install --save-dev babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-meteor eslint-plugin-react eslint-plugin-jsx-a11y eslint-import-resolver-meteor eslint @meteorjs/eslint-config-meteor
+add underscore and oauth-encryption
+set up facebook authentification
+new account - insert name, age, sex, country(city)
+possibility to book without an account
+
+
+                <!--autoform variant-->
+                <!--{{#autoForm collection="Shows" id="insertShowForm" type="insert"}}-->
+                    <!--{{> afQuickField name="title" autocomplete="off"}}-->
+                    <!--{{> afQuickField name="summary" autocomplete="off"}}-->
+                    <!--{{> afQuickField name="image" id="imageId"}}-->
+                    <!--<button type="submit">Continue</button>-->
+                <!--{{/autoForm}}-->
+
+
+WHY???
+- x in modal not working
+-

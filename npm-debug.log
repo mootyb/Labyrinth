@@ -1,0 +1,1718 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node',
+1 verbose cli   '/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@3.10.9
+3 info using node@v4.6.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData @babel/runtime
+20 silly mapToRegistry name @babel/runtime
+21 silly mapToRegistry scope (from package name) @babel
+22 verbose mapToRegistry no registry URL found in name for scope @babel
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: '@babel/runtime',
+25 silly mapToRegistry   scope: '@babel',
+25 silly mapToRegistry   escapedName: '@babel%2fruntime',
+25 silly mapToRegistry   name: '@babel/runtime',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fruntime
+27 silly fetchNamedPackageData meteor-node-stubs
+28 silly mapToRegistry name meteor-node-stubs
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'meteor-node-stubs',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   escapedName: 'meteor-node-stubs',
+31 silly mapToRegistry   name: 'meteor-node-stubs',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/meteor-node-stubs
+33 verbose request uri https://registry.npmjs.org/@babel%2fruntime
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 12:09:53 PM
+36 verbose request id 0cb2c89a8e0f00b3
+37 http request GET https://registry.npmjs.org/@babel%2fruntime
+38 verbose request uri https://registry.npmjs.org/meteor-node-stubs
+39 verbose request no auth needed
+40 info attempt registry request try #1 at 12:09:53 PM
+41 http request GET https://registry.npmjs.org/meteor-node-stubs
+42 http 200 https://registry.npmjs.org/@babel%2fruntime
+43 verbose headers { date: 'Sun, 01 Jul 2018 12:09:51 GMT',
+43 verbose headers   'content-type': 'application/json; charset=UTF-8',
+43 verbose headers   'transfer-encoding': 'chunked',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'set-cookie': [ '__cfduid=d5b452b5c86cd4885b2b161c4ad7cbf2e1530446991; expires=Mon, 01-Jul-19 12:09:51 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+43 verbose headers   'cache-control': 'public, max-age=14400',
+43 verbose headers   'cf-cache-status': 'HIT',
+43 verbose headers   'cf-ray': '4338c4209b9b7eee-BUD',
+43 verbose headers   etag: 'W/"9c4b492fb8fe8188a18c28231472d3fd"',
+43 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+43 verbose headers   'last-modified': 'Tue, 12 Jun 2018 21:19:13 GMT',
+43 verbose headers   vary: 'Accept-Encoding',
+43 verbose headers   server: 'cloudflare',
+43 verbose headers   'content-encoding': 'gzip' }
+44 silly get cb [ 200,
+44 silly get   { date: 'Sun, 01 Jul 2018 12:09:51 GMT',
+44 silly get     'content-type': 'application/json; charset=UTF-8',
+44 silly get     'transfer-encoding': 'chunked',
+44 silly get     connection: 'keep-alive',
+44 silly get     'set-cookie': [ '__cfduid=d5b452b5c86cd4885b2b161c4ad7cbf2e1530446991; expires=Mon, 01-Jul-19 12:09:51 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+44 silly get     'cache-control': 'public, max-age=14400',
+44 silly get     'cf-cache-status': 'HIT',
+44 silly get     'cf-ray': '4338c4209b9b7eee-BUD',
+44 silly get     etag: 'W/"9c4b492fb8fe8188a18c28231472d3fd"',
+44 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+44 silly get     'last-modified': 'Tue, 12 Jun 2018 21:19:13 GMT',
+44 silly get     vary: 'Accept-Encoding',
+44 silly get     server: 'cloudflare',
+44 silly get     'content-encoding': 'gzip' } ]
+45 verbose get saving @babel/runtime to /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/registry.npmjs.org/_40babel_252fruntime/.cache.json
+46 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+47 http 200 https://registry.npmjs.org/meteor-node-stubs
+48 verbose headers { date: 'Sun, 01 Jul 2018 12:09:51 GMT',
+48 verbose headers   'content-type': 'application/json; charset=UTF-8',
+48 verbose headers   'transfer-encoding': 'chunked',
+48 verbose headers   connection: 'keep-alive',
+48 verbose headers   'set-cookie': [ '__cfduid=d0ed45a35dae4e617ae3fcf69c299b11b1530446991; expires=Mon, 01-Jul-19 12:09:51 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+48 verbose headers   'cache-control': 'max-age=300',
+48 verbose headers   'cf-cache-status': 'HIT',
+48 verbose headers   'cf-ray': '4338c4209d027ea6-BUD',
+48 verbose headers   etag: 'W/"1191a4bc6cb4ecdca63abadf39887fa0"',
+48 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+48 verbose headers   'last-modified': 'Sun, 27 May 2018 07:57:08 GMT',
+48 verbose headers   vary: 'accept-encoding, accept',
+48 verbose headers   server: 'cloudflare',
+48 verbose headers   'content-encoding': 'gzip' }
+49 silly get cb [ 200,
+49 silly get   { date: 'Sun, 01 Jul 2018 12:09:51 GMT',
+49 silly get     'content-type': 'application/json; charset=UTF-8',
+49 silly get     'transfer-encoding': 'chunked',
+49 silly get     connection: 'keep-alive',
+49 silly get     'set-cookie': [ '__cfduid=d0ed45a35dae4e617ae3fcf69c299b11b1530446991; expires=Mon, 01-Jul-19 12:09:51 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+49 silly get     'cache-control': 'max-age=300',
+49 silly get     'cf-cache-status': 'HIT',
+49 silly get     'cf-ray': '4338c4209d027ea6-BUD',
+49 silly get     etag: 'W/"1191a4bc6cb4ecdca63abadf39887fa0"',
+49 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+49 silly get     'last-modified': 'Sun, 27 May 2018 07:57:08 GMT',
+49 silly get     vary: 'accept-encoding, accept',
+49 silly get     server: 'cloudflare',
+49 silly get     'content-encoding': 'gzip' } ]
+50 verbose get saving meteor-node-stubs to /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/registry.npmjs.org/meteor-node-stubs/.cache.json
+51 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir already in flight; waiting
+52 silly resolveWithNewModule meteor-node-stubs@0.3.3 checking installable status
+53 silly cache add args [ 'meteor-node-stubs@^0.3.2', null ]
+54 verbose cache add spec meteor-node-stubs@^0.3.2
+55 silly cache add parsed spec Result {
+55 silly cache add   raw: 'meteor-node-stubs@^0.3.2',
+55 silly cache add   scope: null,
+55 silly cache add   escapedName: 'meteor-node-stubs',
+55 silly cache add   name: 'meteor-node-stubs',
+55 silly cache add   rawSpec: '^0.3.2',
+55 silly cache add   spec: '>=0.3.2 <0.4.0',
+55 silly cache add   type: 'range' }
+56 silly addNamed meteor-node-stubs@>=0.3.2 <0.4.0
+57 verbose addNamed ">=0.3.2 <0.4.0" is a valid semver range for meteor-node-stubs
+58 silly addNameRange { name: 'meteor-node-stubs',
+58 silly addNameRange   range: '>=0.3.2 <0.4.0',
+58 silly addNameRange   hasData: false }
+59 silly mapToRegistry name meteor-node-stubs
+60 silly mapToRegistry using default registry
+61 silly mapToRegistry registry https://registry.npmjs.org/
+62 silly mapToRegistry data Result {
+62 silly mapToRegistry   raw: 'meteor-node-stubs',
+62 silly mapToRegistry   scope: null,
+62 silly mapToRegistry   escapedName: 'meteor-node-stubs',
+62 silly mapToRegistry   name: 'meteor-node-stubs',
+62 silly mapToRegistry   rawSpec: '',
+62 silly mapToRegistry   spec: 'latest',
+62 silly mapToRegistry   type: 'tag' }
+63 silly mapToRegistry uri https://registry.npmjs.org/meteor-node-stubs
+64 verbose addNameRange registry:https://registry.npmjs.org/meteor-node-stubs not in flight; fetching
+65 silly resolveWithNewModule @babel/runtime@7.0.0-beta.51 checking installable status
+66 silly cache add args [ '@babel/runtime@^7.0.0-beta.42', null ]
+67 verbose cache add spec @babel/runtime@^7.0.0-beta.42
+68 silly cache add parsed spec Result {
+68 silly cache add   raw: '@babel/runtime@^7.0.0-beta.42',
+68 silly cache add   scope: '@babel',
+68 silly cache add   escapedName: '@babel%2fruntime',
+68 silly cache add   name: '@babel/runtime',
+68 silly cache add   rawSpec: '^7.0.0-beta.42',
+68 silly cache add   spec: '>=7.0.0-beta.42 <8.0.0',
+68 silly cache add   type: 'range' }
+69 silly addNamed @babel/runtime@>=7.0.0-beta.42 <8.0.0
+70 verbose addNamed ">=7.0.0-beta.42 <8.0.0" is a valid semver range for @babel/runtime
+71 silly addNameRange { name: '@babel/runtime',
+71 silly addNameRange   range: '>=7.0.0-beta.42 <8.0.0',
+71 silly addNameRange   hasData: false }
+72 silly mapToRegistry name @babel/runtime
+73 silly mapToRegistry scope (from package name) @babel
+74 verbose mapToRegistry no registry URL found in name for scope @babel
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: '@babel/runtime',
+77 silly mapToRegistry   scope: '@babel',
+77 silly mapToRegistry   escapedName: '@babel%2fruntime',
+77 silly mapToRegistry   name: '@babel/runtime',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fruntime
+79 verbose addNameRange registry:https://registry.npmjs.org/@babel%2fruntime not in flight; fetching
+80 verbose get https://registry.npmjs.org/meteor-node-stubs not expired, no request
+81 silly addNameRange number 2 { name: 'meteor-node-stubs',
+81 silly addNameRange   range: '>=0.3.2 <0.4.0',
+81 silly addNameRange   hasData: true }
+82 silly addNameRange versions [ 'meteor-node-stubs',
+82 silly addNameRange   [ '0.1.0',
+82 silly addNameRange     '0.1.1',
+82 silly addNameRange     '0.2.0',
+82 silly addNameRange     '0.2.1',
+82 silly addNameRange     '0.2.2',
+82 silly addNameRange     '0.2.3',
+82 silly addNameRange     '0.2.4',
+82 silly addNameRange     '0.2.5',
+82 silly addNameRange     '0.2.6',
+82 silly addNameRange     '0.2.7',
+82 silly addNameRange     '0.2.8',
+82 silly addNameRange     '0.2.9',
+82 silly addNameRange     '0.2.10',
+82 silly addNameRange     '0.2.11',
+82 silly addNameRange     '0.3.0',
+82 silly addNameRange     '0.3.1',
+82 silly addNameRange     '0.3.2',
+82 silly addNameRange     '0.3.3',
+82 silly addNameRange     '0.4.0',
+82 silly addNameRange     '0.4.1' ] ]
+83 silly addNamed meteor-node-stubs@0.3.3
+84 verbose addNamed "0.3.3" is a plain semver version for meteor-node-stubs
+85 verbose get https://registry.npmjs.org/@babel%2fruntime not expired, no request
+86 silly addNameRange number 2 { name: '@babel/runtime',
+86 silly addNameRange   range: '>=7.0.0-beta.42 <8.0.0',
+86 silly addNameRange   hasData: true }
+87 silly addNameRange versions [ '@babel/runtime',
+87 silly addNameRange   [ '7.0.0-beta.4',
+87 silly addNameRange     '7.0.0-beta.5',
+87 silly addNameRange     '7.0.0-beta.31',
+87 silly addNameRange     '7.0.0-beta.32',
+87 silly addNameRange     '7.0.0-beta.33',
+87 silly addNameRange     '7.0.0-beta.34',
+87 silly addNameRange     '7.0.0-beta.35',
+87 silly addNameRange     '7.0.0-beta.36',
+87 silly addNameRange     '7.0.0-beta.37',
+87 silly addNameRange     '7.0.0-beta.38',
+87 silly addNameRange     '7.0.0-beta.39',
+87 silly addNameRange     '7.0.0-beta.40',
+87 silly addNameRange     '7.0.0-beta.41',
+87 silly addNameRange     '7.0.0-beta.42',
+87 silly addNameRange     '7.0.0-beta.43',
+87 silly addNameRange     '7.0.0-beta.44',
+87 silly addNameRange     '7.0.0-beta.45',
+87 silly addNameRange     '7.0.0-beta.46',
+87 silly addNameRange     '7.0.0-beta.47',
+87 silly addNameRange     '7.0.0-beta.48',
+87 silly addNameRange     '7.0.0-beta.49',
+87 silly addNameRange     '7.0.0-beta.50',
+87 silly addNameRange     '7.0.0-beta.51' ] ]
+88 silly addNamed @babel/runtime@7.0.0-beta.51
+89 verbose addNamed "7.0.0-beta.51" is a plain semver version for @babel/runtime
+90 silly mapToRegistry name @babel/runtime
+91 silly mapToRegistry scope (from package name) @babel
+92 verbose mapToRegistry no registry URL found in name for scope @babel
+93 silly mapToRegistry using default registry
+94 silly mapToRegistry registry https://registry.npmjs.org/
+95 silly mapToRegistry data Result {
+95 silly mapToRegistry   raw: '@babel/runtime',
+95 silly mapToRegistry   scope: '@babel',
+95 silly mapToRegistry   escapedName: '@babel%2fruntime',
+95 silly mapToRegistry   name: '@babel/runtime',
+95 silly mapToRegistry   rawSpec: '',
+95 silly mapToRegistry   spec: 'latest',
+95 silly mapToRegistry   type: 'tag' }
+96 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fruntime
+97 verbose addRemoteTarball https://registry.npmjs.org/@babel/runtime/-/runtime-7.0.0-beta.51.tgz not in flight; adding
+98 verbose addRemoteTarball [ 'https://registry.npmjs.org/@babel/runtime/-/runtime-7.0.0-beta.51.tgz',
+98 verbose addRemoteTarball   '48b8ed18307034c6620f643514650ca2ccc0165a' ]
+99 silly mapToRegistry name meteor-node-stubs
+100 silly mapToRegistry using default registry
+101 silly mapToRegistry registry https://registry.npmjs.org/
+102 silly mapToRegistry data Result {
+102 silly mapToRegistry   raw: 'meteor-node-stubs',
+102 silly mapToRegistry   scope: null,
+102 silly mapToRegistry   escapedName: 'meteor-node-stubs',
+102 silly mapToRegistry   name: 'meteor-node-stubs',
+102 silly mapToRegistry   rawSpec: '',
+102 silly mapToRegistry   spec: 'latest',
+102 silly mapToRegistry   type: 'tag' }
+103 silly mapToRegistry uri https://registry.npmjs.org/meteor-node-stubs
+104 verbose addRemoteTarball https://registry.npmjs.org/meteor-node-stubs/-/meteor-node-stubs-0.3.3.tgz not in flight; adding
+105 verbose addRemoteTarball [ 'https://registry.npmjs.org/meteor-node-stubs/-/meteor-node-stubs-0.3.3.tgz',
+105 verbose addRemoteTarball   '4037ec464573642b0efee3961a649a4818f796db' ]
+106 info retry fetch attempt 1 at 12:09:53 PM
+107 info attempt registry request try #1 at 12:09:53 PM
+108 http fetch GET https://registry.npmjs.org/meteor-node-stubs/-/meteor-node-stubs-0.3.3.tgz
+109 info retry fetch attempt 1 at 12:09:53 PM
+110 info attempt registry request try #1 at 12:09:53 PM
+111 http fetch GET https://registry.npmjs.org/@babel/runtime/-/runtime-7.0.0-beta.51.tgz
+112 http fetch 200 https://registry.npmjs.org/@babel/runtime/-/runtime-7.0.0-beta.51.tgz
+113 silly fetchAndShaCheck shasum 48b8ed18307034c6620f643514650ca2ccc0165a
+114 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/_40babel/runtime/-/runtime-7.0.0-beta.51.tgz not in flight; adding
+115 verbose addTmpTarball already have metadata; skipping unpack for @babel/runtime@7.0.0-beta.51
+116 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+117 http fetch 200 https://registry.npmjs.org/meteor-node-stubs/-/meteor-node-stubs-0.3.3.tgz
+118 silly cache afterAdd @babel/runtime@7.0.0-beta.51
+119 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/@babel/runtime/7.0.0-beta.51/package/package.json not in flight; writing
+120 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+121 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/@babel/runtime/7.0.0-beta.51/package/package.json written
+122 silly fetchAndShaCheck shasum 4037ec464573642b0efee3961a649a4818f796db
+123 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/meteor-node-stubs/-/meteor-node-stubs-0.3.3.tgz not in flight; adding
+124 verbose addTmpTarball already have metadata; skipping unpack for meteor-node-stubs@0.3.3
+125 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+126 silly cache afterAdd meteor-node-stubs@0.3.3
+127 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/meteor-node-stubs/0.3.3/package/package.json not in flight; writing
+128 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+129 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/meteor-node-stubs/0.3.3/package/package.json written
+130 silly addShrinkwrap Found shrinkwrap in meteor-node-stubs package/npm-shrinkwrap.json
+131 silly addShrinkwrap Completed reading shrinkwrap in meteor-node-stubs
+132 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+133 verbose addBundled extract /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/meteor-node-stubs/0.3.3/package.tgz
+134 verbose tar unpack /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/meteor-node-stubs/0.3.3/package.tgz
+135 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-5c3cec1c
+136 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-5c3cec1c is being purged
+137 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-5c3cec1c
+138 silly gunzTarPerm modes [ '755', '644' ]
+139 silly gunzTarPerm extractEntry package.json
+140 silly gunzTarPerm extractEntry index.js
+141 silly gunzTarPerm extractEntry LICENSE
+142 silly gunzTarPerm extractEntry map.json
+143 silly gunzTarPerm extractEntry npm-shrinkwrap.json
+144 silly gunzTarPerm extractEntry README.md
+145 silly gunzTarPerm extractEntry deps/_stream_duplex.js
+146 silly gunzTarPerm extractEntry deps/_stream_passthrough.js
+147 silly gunzTarPerm extractEntry deps/_stream_readable.js
+148 silly gunzTarPerm extractEntry deps/_stream_transform.js
+149 silly gunzTarPerm extractEntry deps/_stream_writable.js
+150 silly gunzTarPerm extractEntry deps/assert.js
+151 silly gunzTarPerm extractEntry deps/buffer.js
+152 silly gunzTarPerm extractEntry deps/child_process.js
+153 silly gunzTarPerm extractEntry deps/cluster.js
+154 silly gunzTarPerm extractEntry deps/console.js
+155 silly gunzTarPerm extractEntry deps/constants.js
+156 silly gunzTarPerm extractEntry deps/crypto.js
+157 silly gunzTarPerm extractEntry deps/dgram.js
+158 silly gunzTarPerm extractEntry deps/dns.js
+159 silly gunzTarPerm extractEntry deps/domain.js
+160 silly gunzTarPerm extractEntry deps/events.js
+161 silly gunzTarPerm extractEntry deps/fs.js
+162 silly gunzTarPerm extractEntry deps/http.js
+163 silly gunzTarPerm extractEntry deps/https.js
+164 silly gunzTarPerm extractEntry deps/module.js
+165 silly gunzTarPerm extractEntry deps/net.js
+166 silly gunzTarPerm extractEntry deps/os.js
+167 silly gunzTarPerm extractEntry deps/path.js
+168 silly gunzTarPerm extractEntry deps/process.js
+169 silly gunzTarPerm extractEntry deps/punycode.js
+170 silly gunzTarPerm extractEntry deps/querystring.js
+171 silly gunzTarPerm extractEntry deps/readline.js
+172 silly gunzTarPerm extractEntry deps/repl.js
+173 silly gunzTarPerm extractEntry deps/stream.js
+174 silly gunzTarPerm extractEntry deps/string_decoder.js
+175 silly gunzTarPerm extractEntry deps/sys.js
+176 silly gunzTarPerm extractEntry deps/timers.js
+177 silly gunzTarPerm extractEntry deps/tls.js
+178 silly gunzTarPerm extractEntry deps/tty.js
+179 silly gunzTarPerm extractEntry deps/url.js
+180 silly gunzTarPerm extractEntry deps/util.js
+181 silly gunzTarPerm extractEntry deps/vm.js
+182 silly gunzTarPerm extractEntry deps/zlib.js
+183 silly gunzTarPerm extractEntry scripts/build-deps.js
+184 silly gunzTarPerm extractEntry wrappers/crypto.js
+185 silly gunzTarPerm extractEntry wrappers/module.js
+186 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1.js
+187 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/api.js
+188 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/base/buffer.js
+189 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/base/index.js
+190 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/base/node.js
+191 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/base/reporter.js
+192 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/constants/der.js
+193 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/constants/index.js
+194 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/decoders/der.js
+195 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/decoders/index.js
+196 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/decoders/pem.js
+197 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/encoders/der.js
+198 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/encoders/index.js
+199 silly gunzTarPerm extractEntry node_modules/asn1.js/lib/asn1/encoders/pem.js
+200 silly gunzTarPerm extractEntry node_modules/asn1.js/package.json
+201 silly gunzTarPerm extractEntry node_modules/asn1.js/README.md
+202 silly gunzTarPerm extractEntry node_modules/assert/.npmignore
+203 silly gunzTarPerm extractEntry node_modules/assert/.travis.yml
+204 silly gunzTarPerm extractEntry node_modules/assert/.zuul.yml
+205 silly gunzTarPerm extractEntry node_modules/assert/assert.js
+206 silly gunzTarPerm extractEntry node_modules/assert/LICENSE
+207 silly gunzTarPerm extractEntry node_modules/assert/package.json
+208 silly gunzTarPerm extractEntry node_modules/assert/README.md
+209 silly gunzTarPerm extractEntry node_modules/assert/test.js
+210 silly gunzTarPerm extractEntry node_modules/base64-js/base64js.min.js
+211 silly gunzTarPerm extractEntry node_modules/base64-js/index.js
+212 silly gunzTarPerm extractEntry node_modules/base64-js/LICENSE
+213 silly gunzTarPerm extractEntry node_modules/base64-js/package.json
+214 silly gunzTarPerm extractEntry node_modules/base64-js/README.md
+215 silly gunzTarPerm extractEntry node_modules/base64-js/test/big-data.js
+216 silly gunzTarPerm extractEntry node_modules/base64-js/test/convert.js
+217 silly gunzTarPerm extractEntry node_modules/base64-js/test/url-safe.js
+218 silly gunzTarPerm extractEntry node_modules/bn.js/.npmignore
+219 silly gunzTarPerm extractEntry node_modules/bn.js/lib/bn.js
+220 silly gunzTarPerm extractEntry node_modules/bn.js/package.json
+221 silly gunzTarPerm extractEntry node_modules/bn.js/README.md
+222 silly gunzTarPerm extractEntry node_modules/bn.js/util/genCombMulTo.js
+223 silly gunzTarPerm extractEntry node_modules/bn.js/util/genCombMulTo10.js
+224 silly gunzTarPerm extractEntry node_modules/brorand/.npmignore
+225 silly gunzTarPerm extractEntry node_modules/brorand/index.js
+226 silly gunzTarPerm extractEntry node_modules/brorand/package.json
+227 silly gunzTarPerm extractEntry node_modules/brorand/README.md
+228 silly gunzTarPerm extractEntry node_modules/brorand/test/api-test.js
+229 silly gunzTarPerm extractEntry node_modules/browserify-aes/.travis.yml
+230 silly gunzTarPerm extractEntry node_modules/browserify-aes/aes.js
+231 silly gunzTarPerm extractEntry node_modules/browserify-aes/authCipher.js
+232 silly gunzTarPerm extractEntry node_modules/browserify-aes/browser.js
+233 silly gunzTarPerm extractEntry node_modules/browserify-aes/decrypter.js
+234 silly gunzTarPerm extractEntry node_modules/browserify-aes/encrypter.js
+235 silly gunzTarPerm extractEntry node_modules/browserify-aes/ghash.js
+236 silly gunzTarPerm extractEntry node_modules/browserify-aes/incr32.js
+237 silly gunzTarPerm extractEntry node_modules/browserify-aes/index.js
+238 silly gunzTarPerm extractEntry node_modules/browserify-aes/LICENSE
+239 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/cbc.js
+240 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/cfb.js
+241 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/cfb1.js
+242 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/cfb8.js
+243 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/ctr.js
+244 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/ecb.js
+245 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/index.js
+246 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/list.json
+247 silly gunzTarPerm extractEntry node_modules/browserify-aes/modes/ofb.js
+248 silly gunzTarPerm extractEntry node_modules/browserify-aes/package.json
+249 silly gunzTarPerm extractEntry node_modules/browserify-aes/README.md
+250 silly gunzTarPerm extractEntry node_modules/browserify-aes/streamCipher.js
+251 silly gunzTarPerm extractEntry node_modules/browserify-cipher/.travis.yml
+252 silly gunzTarPerm extractEntry node_modules/browserify-cipher/browser.js
+253 silly gunzTarPerm extractEntry node_modules/browserify-cipher/index.js
+254 silly gunzTarPerm extractEntry node_modules/browserify-cipher/package.json
+255 silly gunzTarPerm extractEntry node_modules/browserify-cipher/readme.md
+256 silly gunzTarPerm extractEntry node_modules/browserify-cipher/test.js
+257 silly gunzTarPerm extractEntry node_modules/browserify-des/index.js
+258 silly gunzTarPerm extractEntry node_modules/browserify-des/modes.js
+259 silly gunzTarPerm extractEntry node_modules/browserify-des/package.json
+260 silly gunzTarPerm extractEntry node_modules/browserify-des/readme.md
+261 silly gunzTarPerm extractEntry node_modules/browserify-des/test.js
+262 silly gunzTarPerm extractEntry node_modules/browserify-rsa/.travis.yml
+263 silly gunzTarPerm extractEntry node_modules/browserify-rsa/index.js
+264 silly gunzTarPerm extractEntry node_modules/browserify-rsa/LICENSE
+265 silly gunzTarPerm extractEntry node_modules/browserify-rsa/package.json
+266 silly gunzTarPerm extractEntry node_modules/browserify-rsa/readme.md
+267 silly gunzTarPerm extractEntry node_modules/browserify-rsa/test.js
+268 silly gunzTarPerm extractEntry node_modules/browserify-sign/algos.js
+269 silly gunzTarPerm extractEntry node_modules/browserify-sign/browser/algorithms.json
+270 silly gunzTarPerm extractEntry node_modules/browserify-sign/browser/curves.json
+271 silly gunzTarPerm extractEntry node_modules/browserify-sign/browser/index.js
+272 silly gunzTarPerm extractEntry node_modules/browserify-sign/browser/sign.js
+273 silly gunzTarPerm extractEntry node_modules/browserify-sign/browser/verify.js
+274 silly gunzTarPerm extractEntry node_modules/browserify-sign/index.js
+275 silly gunzTarPerm extractEntry node_modules/browserify-sign/LICENSE
+276 silly gunzTarPerm extractEntry node_modules/browserify-sign/package.json
+277 silly gunzTarPerm extractEntry node_modules/browserify-sign/README.md
+278 silly gunzTarPerm extractEntry node_modules/browserify-zlib/.npmignore
+279 silly gunzTarPerm extractEntry node_modules/browserify-zlib/.travis.yml
+280 silly gunzTarPerm extractEntry node_modules/browserify-zlib/package.json
+281 silly gunzTarPerm extractEntry node_modules/browserify-zlib/README.md
+282 silly gunzTarPerm extractEntry node_modules/browserify-zlib/src/binding.js
+283 silly gunzTarPerm extractEntry node_modules/browserify-zlib/src/index.js
+284 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/fixtures/elipses.txt
+285 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/fixtures/empty.txt
+286 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/fixtures/person.jpg
+287 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/ignored/test-zlib-dictionary-fail.js
+288 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/ignored/test-zlib-dictionary.js
+289 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/ignored/test-zlib-params.js
+290 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/package.json
+291 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-close-after-write.js
+292 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-convenience-methods.js
+293 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-from-string.js
+294 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-invalid-input.js
+295 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-random-byte-pipes.js
+296 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-write-after-flush.js
+297 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib-zero-byte.js
+298 silly gunzTarPerm extractEntry node_modules/browserify-zlib/test/test-zlib.js
+299 silly gunzTarPerm extractEntry node_modules/buffer-xor/.npmignore
+300 silly gunzTarPerm extractEntry node_modules/buffer-xor/.travis.yml
+301 silly gunzTarPerm extractEntry node_modules/buffer-xor/index.js
+302 silly gunzTarPerm extractEntry node_modules/buffer-xor/inline.js
+303 silly gunzTarPerm extractEntry node_modules/buffer-xor/inplace.js
+304 silly gunzTarPerm extractEntry node_modules/buffer-xor/LICENSE
+305 silly gunzTarPerm extractEntry node_modules/buffer-xor/package.json
+306 silly gunzTarPerm extractEntry node_modules/buffer-xor/README.md
+307 silly gunzTarPerm extractEntry node_modules/buffer-xor/test/fixtures.json
+308 silly gunzTarPerm extractEntry node_modules/buffer-xor/test/index.js
+309 silly gunzTarPerm extractEntry node_modules/buffer/.npmignore
+310 silly gunzTarPerm extractEntry node_modules/buffer/.travis.yml
+311 silly gunzTarPerm extractEntry node_modules/buffer/AUTHORS.md
+312 silly gunzTarPerm extractEntry node_modules/buffer/bin/download-node-tests.js
+313 silly gunzTarPerm extractEntry node_modules/buffer/bin/test.js
+314 silly gunzTarPerm extractEntry node_modules/buffer/bin/update-authors.sh
+315 silly gunzTarPerm extractEntry node_modules/buffer/bin/zuul-es5.yml
+316 silly gunzTarPerm extractEntry node_modules/buffer/bin/zuul-es6.yml
+317 silly gunzTarPerm extractEntry node_modules/buffer/index.js
+318 silly gunzTarPerm extractEntry node_modules/buffer/LICENSE
+319 silly gunzTarPerm extractEntry node_modules/buffer/package.json
+320 silly gunzTarPerm extractEntry node_modules/buffer/README.md
+321 silly gunzTarPerm extractEntry node_modules/buffer/test/_polyfill.js
+322 silly gunzTarPerm extractEntry node_modules/buffer/test/base64.js
+323 silly gunzTarPerm extractEntry node_modules/buffer/test/basic.js
+324 silly gunzTarPerm extractEntry node_modules/buffer/test/compare.js
+325 silly gunzTarPerm extractEntry node_modules/buffer/test/constructor.js
+326 silly gunzTarPerm extractEntry node_modules/buffer/test/from-string.js
+327 silly gunzTarPerm extractEntry node_modules/buffer/test/is-buffer.js
+328 silly gunzTarPerm extractEntry node_modules/buffer/test/methods.js
+329 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-alloc.js
+330 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-arraybuffer.js
+331 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-ascii.js
+332 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-bad-overload.js
+333 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-badhex.js
+334 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-bytelength.js
+335 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-compare-offset.js
+336 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-concat.js
+337 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-fill.js
+338 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-includes.js
+339 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-indexof.js
+340 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-inheritance.js
+341 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-inspect.js
+342 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-iterator.js
+343 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-safe-unsafe.js
+344 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-slow.js
+345 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-swap.js
+346 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-zero-fill-cli.js
+347 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer-zero-fill-reset.js
+348 silly gunzTarPerm extractEntry node_modules/buffer/test/node/test-buffer.js
+349 silly gunzTarPerm extractEntry node_modules/buffer/test/slice.js
+350 silly gunzTarPerm extractEntry node_modules/buffer/test/static.js
+351 silly gunzTarPerm extractEntry node_modules/buffer/test/to-string.js
+352 silly gunzTarPerm extractEntry node_modules/buffer/test/write_infinity.js
+353 silly gunzTarPerm extractEntry node_modules/buffer/test/write.js
+354 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/browser.js
+355 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/build.js
+356 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/index.js
+357 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/license
+358 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/package.json
+359 silly gunzTarPerm extractEntry node_modules/builtin-status-codes/readme.md
+360 silly gunzTarPerm extractEntry node_modules/cipher-base/.eslintrc
+361 silly gunzTarPerm extractEntry node_modules/cipher-base/.npmignore
+362 silly gunzTarPerm extractEntry node_modules/cipher-base/.travis.yml
+363 silly gunzTarPerm extractEntry node_modules/cipher-base/index.js
+364 silly gunzTarPerm extractEntry node_modules/cipher-base/LICENSE
+365 silly gunzTarPerm extractEntry node_modules/cipher-base/package.json
+366 silly gunzTarPerm extractEntry node_modules/cipher-base/README.md
+367 silly gunzTarPerm extractEntry node_modules/cipher-base/test.js
+368 silly gunzTarPerm extractEntry node_modules/console-browserify/.npmignore
+369 silly gunzTarPerm extractEntry node_modules/console-browserify/.testem.json
+370 silly gunzTarPerm extractEntry node_modules/console-browserify/.travis.yml
+371 silly gunzTarPerm extractEntry node_modules/console-browserify/index.js
+372 silly gunzTarPerm extractEntry node_modules/console-browserify/LICENCE
+373 silly gunzTarPerm extractEntry node_modules/console-browserify/package.json
+374 silly gunzTarPerm extractEntry node_modules/console-browserify/README.md
+375 silly gunzTarPerm extractEntry node_modules/console-browserify/test/index.js
+376 silly gunzTarPerm extractEntry node_modules/console-browserify/test/static/index.html
+377 silly gunzTarPerm extractEntry node_modules/console-browserify/test/static/test-adapter.js
+378 silly gunzTarPerm extractEntry node_modules/constants-browserify/build.sh
+379 silly gunzTarPerm extractEntry node_modules/constants-browserify/constants.json
+380 silly gunzTarPerm extractEntry node_modules/constants-browserify/package.json
+381 silly gunzTarPerm extractEntry node_modules/constants-browserify/README.md
+382 silly gunzTarPerm extractEntry node_modules/constants-browserify/test.js
+383 silly gunzTarPerm extractEntry node_modules/create-ecdh/.npmignore
+384 silly gunzTarPerm extractEntry node_modules/create-ecdh/.travis.yml
+385 silly gunzTarPerm extractEntry node_modules/create-ecdh/browser.js
+386 silly gunzTarPerm extractEntry node_modules/create-ecdh/index.js
+387 silly gunzTarPerm extractEntry node_modules/create-ecdh/package.json
+388 silly gunzTarPerm extractEntry node_modules/create-ecdh/readme.md
+389 silly gunzTarPerm extractEntry node_modules/create-hash/.npmignore
+390 silly gunzTarPerm extractEntry node_modules/create-hash/.travis.yml
+391 silly gunzTarPerm extractEntry node_modules/create-hash/browser.js
+392 silly gunzTarPerm extractEntry node_modules/create-hash/index.js
+393 silly gunzTarPerm extractEntry node_modules/create-hash/make-hash.js
+394 silly gunzTarPerm extractEntry node_modules/create-hash/md5.js
+395 silly gunzTarPerm extractEntry node_modules/create-hash/package.json
+396 silly gunzTarPerm extractEntry node_modules/create-hash/readme.md
+397 silly gunzTarPerm extractEntry node_modules/create-hash/test.js
+398 silly gunzTarPerm extractEntry node_modules/create-hmac/browser.js
+399 silly gunzTarPerm extractEntry node_modules/create-hmac/index.js
+400 silly gunzTarPerm extractEntry node_modules/create-hmac/legacy.js
+401 silly gunzTarPerm extractEntry node_modules/create-hmac/package.json
+402 silly gunzTarPerm extractEntry node_modules/create-hmac/README.md
+403 silly gunzTarPerm extractEntry node_modules/crypto-browserify/.travis.yml
+404 silly gunzTarPerm extractEntry node_modules/crypto-browserify/.zuul.yml
+405 silly gunzTarPerm extractEntry node_modules/crypto-browserify/example/bundle.js
+406 silly gunzTarPerm extractEntry node_modules/crypto-browserify/example/index.html
+407 silly gunzTarPerm extractEntry node_modules/crypto-browserify/example/test.js
+408 silly gunzTarPerm extractEntry node_modules/crypto-browserify/index.js
+409 silly gunzTarPerm extractEntry node_modules/crypto-browserify/LICENSE
+410 silly gunzTarPerm extractEntry node_modules/crypto-browserify/package.json
+411 silly gunzTarPerm extractEntry node_modules/crypto-browserify/README.md
+412 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/aes.js
+413 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/create-hash.js
+414 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/create-hmac.js
+415 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/dh.js
+416 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/ecdh.js
+417 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/index.js
+418 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/node/dh.js
+419 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/pbkdf2.js
+420 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/public-encrypt.js
+421 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/random-bytes.js
+422 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/random-fill.js
+423 silly gunzTarPerm extractEntry node_modules/crypto-browserify/test/sign.js
+424 silly gunzTarPerm extractEntry node_modules/date-now/.npmignore
+425 silly gunzTarPerm extractEntry node_modules/date-now/.testem.json
+426 silly gunzTarPerm extractEntry node_modules/date-now/.travis.yml
+427 silly gunzTarPerm extractEntry node_modules/date-now/index.js
+428 silly gunzTarPerm extractEntry node_modules/date-now/LICENCE
+429 silly gunzTarPerm extractEntry node_modules/date-now/package.json
+430 silly gunzTarPerm extractEntry node_modules/date-now/README.md
+431 silly gunzTarPerm extractEntry node_modules/date-now/seed.js
+432 silly gunzTarPerm extractEntry node_modules/date-now/test/index.js
+433 silly gunzTarPerm extractEntry node_modules/date-now/test/static/index.html
+434 silly gunzTarPerm extractEntry node_modules/des.js/.jscsrc
+435 silly gunzTarPerm extractEntry node_modules/des.js/.jshintrc
+436 silly gunzTarPerm extractEntry node_modules/des.js/.npmignore
+437 silly gunzTarPerm extractEntry node_modules/des.js/lib/des.js
+438 silly gunzTarPerm extractEntry node_modules/des.js/lib/des/cbc.js
+439 silly gunzTarPerm extractEntry node_modules/des.js/lib/des/cipher.js
+440 silly gunzTarPerm extractEntry node_modules/des.js/lib/des/des.js
+441 silly gunzTarPerm extractEntry node_modules/des.js/lib/des/ede.js
+442 silly gunzTarPerm extractEntry node_modules/des.js/lib/des/utils.js
+443 silly gunzTarPerm extractEntry node_modules/des.js/package.json
+444 silly gunzTarPerm extractEntry node_modules/des.js/README.md
+445 silly gunzTarPerm extractEntry node_modules/des.js/test/cbc-test.js
+446 silly gunzTarPerm extractEntry node_modules/des.js/test/des-test.js
+447 silly gunzTarPerm extractEntry node_modules/des.js/test/ede-test.js
+448 silly gunzTarPerm extractEntry node_modules/des.js/test/fixtures.js
+449 silly gunzTarPerm extractEntry node_modules/des.js/test/utils-test.js
+450 silly gunzTarPerm extractEntry node_modules/diffie-hellman/.npmignore
+451 silly gunzTarPerm extractEntry node_modules/diffie-hellman/.travis.yml
+452 silly gunzTarPerm extractEntry node_modules/diffie-hellman/browser.js
+453 silly gunzTarPerm extractEntry node_modules/diffie-hellman/index.js
+454 silly gunzTarPerm extractEntry node_modules/diffie-hellman/lib/dh.js
+455 silly gunzTarPerm extractEntry node_modules/diffie-hellman/lib/generatePrime.js
+456 silly gunzTarPerm extractEntry node_modules/diffie-hellman/lib/primes.json
+457 silly gunzTarPerm extractEntry node_modules/diffie-hellman/package.json
+458 silly gunzTarPerm extractEntry node_modules/diffie-hellman/readme.md
+459 silly gunzTarPerm extractEntry node_modules/domain-browser/HISTORY.md
+460 silly gunzTarPerm extractEntry node_modules/domain-browser/LICENSE.md
+461 silly gunzTarPerm extractEntry node_modules/domain-browser/package.json
+462 silly gunzTarPerm extractEntry node_modules/domain-browser/README.md
+463 silly gunzTarPerm extractEntry node_modules/domain-browser/source/index.js
+464 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic.js
+465 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curve/base.js
+466 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curve/edwards.js
+467 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curve/index.js
+468 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curve/mont.js
+469 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curve/short.js
+470 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/curves.js
+471 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/ec/index.js
+472 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/ec/key.js
+473 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/ec/signature.js
+474 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/eddsa/index.js
+475 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/eddsa/key.js
+476 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/eddsa/signature.js
+477 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/precomputed/secp256k1.js
+478 silly gunzTarPerm extractEntry node_modules/elliptic/lib/elliptic/utils.js
+479 silly gunzTarPerm extractEntry node_modules/elliptic/package.json
+480 silly gunzTarPerm extractEntry node_modules/elliptic/README.md
+481 silly gunzTarPerm extractEntry node_modules/events/.npmignore
+482 silly gunzTarPerm extractEntry node_modules/events/.travis.yml
+483 silly gunzTarPerm extractEntry node_modules/events/.zuul.yml
+484 silly gunzTarPerm extractEntry node_modules/events/events.js
+485 silly gunzTarPerm extractEntry node_modules/events/History.md
+486 silly gunzTarPerm extractEntry node_modules/events/LICENSE
+487 silly gunzTarPerm extractEntry node_modules/events/package.json
+488 silly gunzTarPerm extractEntry node_modules/events/Readme.md
+489 silly gunzTarPerm extractEntry node_modules/events/tests/add-listeners.js
+490 silly gunzTarPerm extractEntry node_modules/events/tests/check-listener-leaks.js
+491 silly gunzTarPerm extractEntry node_modules/events/tests/common.js
+492 silly gunzTarPerm extractEntry node_modules/events/tests/index.js
+493 silly gunzTarPerm extractEntry node_modules/events/tests/legacy-compat.js
+494 silly gunzTarPerm extractEntry node_modules/events/tests/listener-count.js
+495 silly gunzTarPerm extractEntry node_modules/events/tests/listeners-side-effects.js
+496 silly gunzTarPerm extractEntry node_modules/events/tests/listeners.js
+497 silly gunzTarPerm extractEntry node_modules/events/tests/max-listeners.js
+498 silly gunzTarPerm extractEntry node_modules/events/tests/modify-in-emit.js
+499 silly gunzTarPerm extractEntry node_modules/events/tests/num-args.js
+500 silly gunzTarPerm extractEntry node_modules/events/tests/once.js
+501 silly gunzTarPerm extractEntry node_modules/events/tests/remove-all-listeners.js
+502 silly gunzTarPerm extractEntry node_modules/events/tests/remove-listeners.js
+503 silly gunzTarPerm extractEntry node_modules/events/tests/set-max-listeners-side-effects.js
+504 silly gunzTarPerm extractEntry node_modules/events/tests/subclass.js
+505 silly gunzTarPerm extractEntry node_modules/evp_bytestokey/index.js
+506 silly gunzTarPerm extractEntry node_modules/evp_bytestokey/LICENSE
+507 silly gunzTarPerm extractEntry node_modules/evp_bytestokey/package.json
+508 silly gunzTarPerm extractEntry node_modules/evp_bytestokey/README.md
+509 silly gunzTarPerm extractEntry node_modules/hash-base/index.js
+510 silly gunzTarPerm extractEntry node_modules/hash-base/package.json
+511 silly gunzTarPerm extractEntry node_modules/hash-base/README.md
+512 silly gunzTarPerm extractEntry node_modules/hash.js/.eslintrc.js
+513 silly gunzTarPerm extractEntry node_modules/hash.js/.npmignore
+514 silly gunzTarPerm extractEntry node_modules/hash.js/.travis.yml
+515 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash.d.ts
+516 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash.js
+517 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/common.js
+518 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/hmac.js
+519 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/ripemd.js
+520 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha.js
+521 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/1.js
+522 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/224.js
+523 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/256.js
+524 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/384.js
+525 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/512.js
+526 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/sha/common.js
+527 silly gunzTarPerm extractEntry node_modules/hash.js/lib/hash/utils.js
+528 silly gunzTarPerm extractEntry node_modules/hash.js/node_modules/inherits/inherits_browser.js
+529 silly gunzTarPerm extractEntry node_modules/hash.js/node_modules/inherits/inherits.js
+530 silly gunzTarPerm extractEntry node_modules/hash.js/node_modules/inherits/LICENSE
+531 silly gunzTarPerm extractEntry node_modules/hash.js/node_modules/inherits/package.json
+532 silly gunzTarPerm extractEntry node_modules/hash.js/node_modules/inherits/README.md
+533 silly gunzTarPerm extractEntry node_modules/hash.js/package.json
+534 silly gunzTarPerm extractEntry node_modules/hash.js/README.md
+535 silly gunzTarPerm extractEntry node_modules/hash.js/test/hash-test.js
+536 silly gunzTarPerm extractEntry node_modules/hash.js/test/hmac-test.js
+537 silly gunzTarPerm extractEntry node_modules/hmac-drbg/.npmignore
+538 silly gunzTarPerm extractEntry node_modules/hmac-drbg/.travis.yml
+539 silly gunzTarPerm extractEntry node_modules/hmac-drbg/lib/hmac-drbg.js
+540 silly gunzTarPerm extractEntry node_modules/hmac-drbg/package.json
+541 silly gunzTarPerm extractEntry node_modules/hmac-drbg/README.md
+542 silly gunzTarPerm extractEntry node_modules/hmac-drbg/test/drbg-test.js
+543 silly gunzTarPerm extractEntry node_modules/hmac-drbg/test/fixtures/hmac-drbg-nist.json
+544 silly gunzTarPerm extractEntry node_modules/https-browserify/index.js
+545 silly gunzTarPerm extractEntry node_modules/https-browserify/LICENSE
+546 silly gunzTarPerm extractEntry node_modules/https-browserify/package.json
+547 silly gunzTarPerm extractEntry node_modules/https-browserify/readme.markdown
+548 silly gunzTarPerm extractEntry node_modules/ieee754/.travis.yml
+549 silly gunzTarPerm extractEntry node_modules/ieee754/.zuul.yml
+550 silly gunzTarPerm extractEntry node_modules/ieee754/index.js
+551 silly gunzTarPerm extractEntry node_modules/ieee754/LICENSE
+552 silly gunzTarPerm extractEntry node_modules/ieee754/package.json
+553 silly gunzTarPerm extractEntry node_modules/ieee754/README.md
+554 silly gunzTarPerm extractEntry node_modules/ieee754/test/basic.js
+555 silly gunzTarPerm extractEntry node_modules/indexof/.npmignore
+556 silly gunzTarPerm extractEntry node_modules/indexof/component.json
+557 silly gunzTarPerm extractEntry node_modules/indexof/index.js
+558 silly gunzTarPerm extractEntry node_modules/indexof/Makefile
+559 silly gunzTarPerm extractEntry node_modules/indexof/package.json
+560 silly gunzTarPerm extractEntry node_modules/indexof/Readme.md
+561 silly gunzTarPerm extractEntry node_modules/inherits/inherits_browser.js
+562 silly gunzTarPerm extractEntry node_modules/inherits/inherits.js
+563 silly gunzTarPerm extractEntry node_modules/inherits/LICENSE
+564 silly gunzTarPerm extractEntry node_modules/inherits/package.json
+565 silly gunzTarPerm extractEntry node_modules/inherits/README.md
+566 silly gunzTarPerm extractEntry node_modules/inherits/test.js
+567 silly gunzTarPerm extractEntry node_modules/isarray/.npmignore
+568 silly gunzTarPerm extractEntry node_modules/isarray/.travis.yml
+569 silly gunzTarPerm extractEntry node_modules/isarray/component.json
+570 silly gunzTarPerm extractEntry node_modules/isarray/index.js
+571 silly gunzTarPerm extractEntry node_modules/isarray/Makefile
+572 silly gunzTarPerm extractEntry node_modules/isarray/package.json
+573 silly gunzTarPerm extractEntry node_modules/isarray/README.md
+574 silly gunzTarPerm extractEntry node_modules/isarray/test.js
+575 silly gunzTarPerm extractEntry node_modules/md5.js/index.js
+576 silly gunzTarPerm extractEntry node_modules/md5.js/LICENSE
+577 silly gunzTarPerm extractEntry node_modules/md5.js/node_modules/hash-base/index.js
+578 silly gunzTarPerm extractEntry node_modules/md5.js/node_modules/hash-base/LICENSE
+579 silly gunzTarPerm extractEntry node_modules/md5.js/node_modules/hash-base/package.json
+580 silly gunzTarPerm extractEntry node_modules/md5.js/node_modules/hash-base/README.md
+581 silly gunzTarPerm extractEntry node_modules/md5.js/package.json
+582 silly gunzTarPerm extractEntry node_modules/md5.js/README.md
+583 silly gunzTarPerm extractEntry node_modules/miller-rabin/.npmignore
+584 silly gunzTarPerm extractEntry node_modules/miller-rabin/1.js
+585 silly gunzTarPerm extractEntry node_modules/miller-rabin/bin/miller-rabin
+586 silly gunzTarPerm extractEntry node_modules/miller-rabin/lib/mr.js
+587 silly gunzTarPerm extractEntry node_modules/miller-rabin/package.json
+588 silly gunzTarPerm extractEntry node_modules/miller-rabin/README.md
+589 silly gunzTarPerm extractEntry node_modules/miller-rabin/test.js
+590 silly gunzTarPerm extractEntry node_modules/miller-rabin/test/api-test.js
+591 silly gunzTarPerm extractEntry node_modules/minimalistic-assert/index.js
+592 silly gunzTarPerm extractEntry node_modules/minimalistic-assert/package.json
+593 silly gunzTarPerm extractEntry node_modules/minimalistic-assert/readme.md
+594 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/.npmignore
+595 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/.travis.yml
+596 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/lib/utils.js
+597 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/package.json
+598 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/README.md
+599 silly gunzTarPerm extractEntry node_modules/minimalistic-crypto-utils/test/utils-test.js
+600 silly gunzTarPerm extractEntry node_modules/os-browserify/.npmignore
+601 silly gunzTarPerm extractEntry node_modules/os-browserify/browser.js
+602 silly gunzTarPerm extractEntry node_modules/os-browserify/LICENSE
+603 silly gunzTarPerm extractEntry node_modules/os-browserify/main.js
+604 silly gunzTarPerm extractEntry node_modules/os-browserify/package.json
+605 silly gunzTarPerm extractEntry node_modules/os-browserify/README.md
+606 silly gunzTarPerm extractEntry node_modules/pako/CHANGELOG.md
+607 silly gunzTarPerm extractEntry node_modules/pako/dist/pako_deflate.js
+608 silly gunzTarPerm extractEntry node_modules/pako/dist/pako_deflate.min.js
+609 silly gunzTarPerm extractEntry node_modules/pako/dist/pako_inflate.js
+610 silly gunzTarPerm extractEntry node_modules/pako/dist/pako_inflate.min.js
+611 silly gunzTarPerm extractEntry node_modules/pako/dist/pako.js
+612 silly gunzTarPerm extractEntry node_modules/pako/dist/pako.min.js
+613 silly gunzTarPerm extractEntry node_modules/pako/index.js
+614 silly gunzTarPerm extractEntry node_modules/pako/lib/deflate.js
+615 silly gunzTarPerm extractEntry node_modules/pako/lib/inflate.js
+616 silly gunzTarPerm extractEntry node_modules/pako/lib/utils/common.js
+617 silly gunzTarPerm extractEntry node_modules/pako/lib/utils/strings.js
+618 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/adler32.js
+619 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/constants.js
+620 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/crc32.js
+621 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/deflate.js
+622 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/gzheader.js
+623 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/inffast.js
+624 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/inflate.js
+625 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/inftrees.js
+626 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/messages.js
+627 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/trees.js
+628 silly gunzTarPerm extractEntry node_modules/pako/lib/zlib/zstream.js
+629 silly gunzTarPerm extractEntry node_modules/pako/LICENSE
+630 silly gunzTarPerm extractEntry node_modules/pako/package.json
+631 silly gunzTarPerm extractEntry node_modules/pako/README.md
+632 silly gunzTarPerm extractEntry node_modules/parse-asn1/.npmignore
+633 silly gunzTarPerm extractEntry node_modules/parse-asn1/.travis.yml
+634 silly gunzTarPerm extractEntry node_modules/parse-asn1/aesid.json
+635 silly gunzTarPerm extractEntry node_modules/parse-asn1/asn1.js
+636 silly gunzTarPerm extractEntry node_modules/parse-asn1/certificate.js
+637 silly gunzTarPerm extractEntry node_modules/parse-asn1/fixProc.js
+638 silly gunzTarPerm extractEntry node_modules/parse-asn1/index.js
+639 silly gunzTarPerm extractEntry node_modules/parse-asn1/package.json
+640 silly gunzTarPerm extractEntry node_modules/parse-asn1/README.md
+641 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/1024.priv
+642 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/1024.pub
+643 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/dsa.1024.priv
+644 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/dsa.1024.pub
+645 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/dsa.2048.priv
+646 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/dsa.2048.pub
+647 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/ec.pass.priv
+648 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/ec.priv
+649 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/ec.pub
+650 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/index.js
+651 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/node.cert
+652 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.1024.priv
+653 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.1024.pub
+654 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.dsa.1024.priv
+655 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.dsa.1024.pub
+656 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.rsa.1024.priv
+657 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.rsa.1024.pub
+658 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.rsa.2028.priv
+659 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass.rsa.2028.pub
+660 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass2.dsa.1024.priv
+661 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/pass2.dsa.1024.pub
+662 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/rsa.1024.priv
+663 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/rsa.1024.pub
+664 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/rsa.2028.priv
+665 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/rsa.2028.pub
+666 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/vector.js
+667 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/vector.priv
+668 silly gunzTarPerm extractEntry node_modules/parse-asn1/test/vector2.priv
+669 silly gunzTarPerm extractEntry node_modules/path-browserify/index.js
+670 silly gunzTarPerm extractEntry node_modules/path-browserify/LICENSE
+671 silly gunzTarPerm extractEntry node_modules/path-browserify/package.json
+672 silly gunzTarPerm extractEntry node_modules/path-browserify/readme.markdown
+673 silly gunzTarPerm extractEntry node_modules/pbkdf2/browser.js
+674 silly gunzTarPerm extractEntry node_modules/pbkdf2/index.js
+675 silly gunzTarPerm extractEntry node_modules/pbkdf2/lib/async.js
+676 silly gunzTarPerm extractEntry node_modules/pbkdf2/lib/default-encoding.js
+677 silly gunzTarPerm extractEntry node_modules/pbkdf2/lib/precondition.js
+678 silly gunzTarPerm extractEntry node_modules/pbkdf2/lib/sync-browser.js
+679 silly gunzTarPerm extractEntry node_modules/pbkdf2/lib/sync.js
+680 silly gunzTarPerm extractEntry node_modules/pbkdf2/LICENSE
+681 silly gunzTarPerm extractEntry node_modules/pbkdf2/package.json
+682 silly gunzTarPerm extractEntry node_modules/pbkdf2/README.md
+683 silly gunzTarPerm extractEntry node_modules/process-nextick-args/index.js
+684 silly gunzTarPerm extractEntry node_modules/process-nextick-args/license.md
+685 silly gunzTarPerm extractEntry node_modules/process-nextick-args/package.json
+686 silly gunzTarPerm extractEntry node_modules/process-nextick-args/readme.md
+687 silly gunzTarPerm extractEntry node_modules/process/.eslintrc
+688 silly gunzTarPerm extractEntry node_modules/process/browser.js
+689 silly gunzTarPerm extractEntry node_modules/process/index.js
+690 silly gunzTarPerm extractEntry node_modules/process/LICENSE
+691 silly gunzTarPerm extractEntry node_modules/process/package.json
+692 silly gunzTarPerm extractEntry node_modules/process/README.md
+693 silly gunzTarPerm extractEntry node_modules/process/test.js
+694 silly gunzTarPerm extractEntry node_modules/public-encrypt/.travis.yml
+695 silly gunzTarPerm extractEntry node_modules/public-encrypt/browser.js
+696 silly gunzTarPerm extractEntry node_modules/public-encrypt/index.js
+697 silly gunzTarPerm extractEntry node_modules/public-encrypt/mgf.js
+698 silly gunzTarPerm extractEntry node_modules/public-encrypt/package.json
+699 silly gunzTarPerm extractEntry node_modules/public-encrypt/privateDecrypt.js
+700 silly gunzTarPerm extractEntry node_modules/public-encrypt/publicEncrypt.js
+701 silly gunzTarPerm extractEntry node_modules/public-encrypt/readme.md
+702 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/1024.priv
+703 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/1024.pub
+704 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/ec.pass.priv
+705 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/ec.priv
+706 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/ec.pub
+707 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/index.js
+708 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/nodeTests.js
+709 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/pass.1024.priv
+710 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/pass.1024.pub
+711 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.1024.priv
+712 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.1024.pub
+713 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.2028.priv
+714 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.2028.pub
+715 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.pass.priv
+716 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/rsa.pass.pub
+717 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/test_cert.pem
+718 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/test_key.pem
+719 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/test_rsa_privkey_encrypted.pem
+720 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/test_rsa_privkey.pem
+721 silly gunzTarPerm extractEntry node_modules/public-encrypt/test/test_rsa_pubkey.pem
+722 silly gunzTarPerm extractEntry node_modules/public-encrypt/withPublic.js
+723 silly gunzTarPerm extractEntry node_modules/public-encrypt/xor.js
+724 silly gunzTarPerm extractEntry node_modules/punycode/LICENSE-MIT.txt
+725 silly gunzTarPerm extractEntry node_modules/punycode/package.json
+726 silly gunzTarPerm extractEntry node_modules/punycode/punycode.js
+727 silly gunzTarPerm extractEntry node_modules/punycode/README.md
+728 silly gunzTarPerm extractEntry node_modules/querystring-es3/.travis.yml
+729 silly gunzTarPerm extractEntry node_modules/querystring-es3/decode.js
+730 silly gunzTarPerm extractEntry node_modules/querystring-es3/encode.js
+731 silly gunzTarPerm extractEntry node_modules/querystring-es3/History.md
+732 silly gunzTarPerm extractEntry node_modules/querystring-es3/index.js
+733 silly gunzTarPerm extractEntry node_modules/querystring-es3/License.md
+734 silly gunzTarPerm extractEntry node_modules/querystring-es3/package.json
+735 silly gunzTarPerm extractEntry node_modules/querystring-es3/Readme.md
+736 silly gunzTarPerm extractEntry node_modules/querystring-es3/test/common-index.js
+737 silly gunzTarPerm extractEntry node_modules/querystring-es3/test/index.js
+738 silly gunzTarPerm extractEntry node_modules/querystring-es3/test/tap-index.js
+739 silly gunzTarPerm extractEntry node_modules/querystring/.History.md.un~
+740 silly gunzTarPerm extractEntry node_modules/querystring/.package.json.un~
+741 silly gunzTarPerm extractEntry node_modules/querystring/.Readme.md.un~
+742 silly gunzTarPerm extractEntry node_modules/querystring/.travis.yml
+743 silly gunzTarPerm extractEntry node_modules/querystring/decode.js
+744 silly gunzTarPerm extractEntry node_modules/querystring/encode.js
+745 silly gunzTarPerm extractEntry node_modules/querystring/History.md
+746 silly gunzTarPerm extractEntry node_modules/querystring/index.js
+747 silly gunzTarPerm extractEntry node_modules/querystring/License.md
+748 silly gunzTarPerm extractEntry node_modules/querystring/package.json
+749 silly gunzTarPerm extractEntry node_modules/querystring/Readme.md
+750 silly gunzTarPerm extractEntry node_modules/querystring/test/.index.js.un~
+751 silly gunzTarPerm extractEntry node_modules/querystring/test/common-index.js
+752 silly gunzTarPerm extractEntry node_modules/querystring/test/index.js
+753 silly gunzTarPerm extractEntry node_modules/querystring/test/tap-index.js
+754 silly gunzTarPerm extractEntry node_modules/randombytes/.travis.yml
+755 silly gunzTarPerm extractEntry node_modules/randombytes/.zuul.yml
+756 silly gunzTarPerm extractEntry node_modules/randombytes/browser.js
+757 silly gunzTarPerm extractEntry node_modules/randombytes/index.js
+758 silly gunzTarPerm extractEntry node_modules/randombytes/LICENSE
+759 silly gunzTarPerm extractEntry node_modules/randombytes/package.json
+760 silly gunzTarPerm extractEntry node_modules/randombytes/README.md
+761 silly gunzTarPerm extractEntry node_modules/randombytes/test.js
+762 silly gunzTarPerm extractEntry node_modules/randomfill/.travis.yml
+763 silly gunzTarPerm extractEntry node_modules/randomfill/.zuul.yml
+764 silly gunzTarPerm extractEntry node_modules/randomfill/browser.js
+765 silly gunzTarPerm extractEntry node_modules/randomfill/index.js
+766 silly gunzTarPerm extractEntry node_modules/randomfill/LICENSE
+767 silly gunzTarPerm extractEntry node_modules/randomfill/package.json
+768 silly gunzTarPerm extractEntry node_modules/randomfill/README.md
+769 silly gunzTarPerm extractEntry node_modules/randomfill/test.js
+770 silly gunzTarPerm extractEntry node_modules/readable-stream/.travis.yml
+771 silly gunzTarPerm extractEntry node_modules/readable-stream/CONTRIBUTING.md
+772 silly gunzTarPerm extractEntry node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
+773 silly gunzTarPerm extractEntry node_modules/readable-stream/duplex-browser.js
+774 silly gunzTarPerm extractEntry node_modules/readable-stream/duplex.js
+775 silly gunzTarPerm extractEntry node_modules/readable-stream/GOVERNANCE.md
+776 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/_stream_duplex.js
+777 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/_stream_passthrough.js
+778 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/_stream_readable.js
+779 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/_stream_transform.js
+780 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/_stream_writable.js
+781 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/internal/streams/BufferList.js
+782 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/internal/streams/destroy.js
+783 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/internal/streams/stream-browser.js
+784 silly gunzTarPerm extractEntry node_modules/readable-stream/lib/internal/streams/stream.js
+785 silly gunzTarPerm extractEntry node_modules/readable-stream/LICENSE
+786 silly gunzTarPerm extractEntry node_modules/readable-stream/node_modules/inherits/inherits_browser.js
+787 silly gunzTarPerm extractEntry node_modules/readable-stream/node_modules/inherits/inherits.js
+788 silly gunzTarPerm extractEntry node_modules/readable-stream/node_modules/inherits/LICENSE
+789 silly gunzTarPerm extractEntry node_modules/readable-stream/node_modules/inherits/package.json
+790 silly gunzTarPerm extractEntry node_modules/readable-stream/node_modules/inherits/README.md
+791 silly gunzTarPerm extractEntry node_modules/readable-stream/package.json
+792 silly gunzTarPerm extractEntry node_modules/readable-stream/passthrough.js
+793 silly gunzTarPerm extractEntry node_modules/readable-stream/readable-browser.js
+794 silly gunzTarPerm extractEntry node_modules/readable-stream/readable.js
+795 silly gunzTarPerm extractEntry node_modules/readable-stream/README.md
+796 silly gunzTarPerm extractEntry node_modules/readable-stream/transform.js
+797 silly gunzTarPerm extractEntry node_modules/readable-stream/writable-browser.js
+798 silly gunzTarPerm extractEntry node_modules/readable-stream/writable.js
+799 silly gunzTarPerm extractEntry node_modules/ripemd160/CHANGELOG.md
+800 silly gunzTarPerm extractEntry node_modules/ripemd160/index.js
+801 silly gunzTarPerm extractEntry node_modules/ripemd160/LICENSE.md
+802 silly gunzTarPerm extractEntry node_modules/ripemd160/package.json
+803 silly gunzTarPerm extractEntry node_modules/ripemd160/README.md
+804 silly gunzTarPerm extractEntry node_modules/safe-buffer/.travis.yml
+805 silly gunzTarPerm extractEntry node_modules/safe-buffer/index.js
+806 silly gunzTarPerm extractEntry node_modules/safe-buffer/LICENSE
+807 silly gunzTarPerm extractEntry node_modules/safe-buffer/package.json
+808 silly gunzTarPerm extractEntry node_modules/safe-buffer/README.md
+809 silly gunzTarPerm extractEntry node_modules/safe-buffer/test.js
+810 silly gunzTarPerm extractEntry node_modules/sha.js/.travis.yml
+811 silly gunzTarPerm extractEntry node_modules/sha.js/bin.js
+812 silly gunzTarPerm extractEntry node_modules/sha.js/hash.js
+813 silly gunzTarPerm extractEntry node_modules/sha.js/index.js
+814 silly gunzTarPerm extractEntry node_modules/sha.js/LICENSE
+815 silly gunzTarPerm extractEntry node_modules/sha.js/package.json
+816 silly gunzTarPerm extractEntry node_modules/sha.js/README.md
+817 silly gunzTarPerm extractEntry node_modules/sha.js/sha.js
+818 silly gunzTarPerm extractEntry node_modules/sha.js/sha1.js
+819 silly gunzTarPerm extractEntry node_modules/sha.js/sha224.js
+820 silly gunzTarPerm extractEntry node_modules/sha.js/sha256.js
+821 silly gunzTarPerm extractEntry node_modules/sha.js/sha384.js
+822 silly gunzTarPerm extractEntry node_modules/sha.js/sha512.js
+823 silly gunzTarPerm extractEntry node_modules/sha.js/test/hash.js
+824 silly gunzTarPerm extractEntry node_modules/sha.js/test/test.js
+825 silly gunzTarPerm extractEntry node_modules/sha.js/test/vectors.js
+826 silly gunzTarPerm extractEntry node_modules/stream-browserify/.npmignore
+827 silly gunzTarPerm extractEntry node_modules/stream-browserify/.travis.yml
+828 silly gunzTarPerm extractEntry node_modules/stream-browserify/index.js
+829 silly gunzTarPerm extractEntry node_modules/stream-browserify/LICENSE
+830 silly gunzTarPerm extractEntry node_modules/stream-browserify/package.json
+831 silly gunzTarPerm extractEntry node_modules/stream-browserify/readme.markdown
+832 silly gunzTarPerm extractEntry node_modules/stream-browserify/test/buf.js
+833 silly gunzTarPerm extractEntry node_modules/stream-http/.travis.yml
+834 silly gunzTarPerm extractEntry node_modules/stream-http/.zuul.yml
+835 silly gunzTarPerm extractEntry node_modules/stream-http/ie8-polyfill.js
+836 silly gunzTarPerm extractEntry node_modules/stream-http/index.js
+837 silly gunzTarPerm extractEntry node_modules/stream-http/lib/capability.js
+838 silly gunzTarPerm extractEntry node_modules/stream-http/lib/request.js
+839 silly gunzTarPerm extractEntry node_modules/stream-http/lib/response.js
+840 silly gunzTarPerm extractEntry node_modules/stream-http/LICENSE
+841 silly gunzTarPerm extractEntry node_modules/stream-http/package.json
+842 silly gunzTarPerm extractEntry node_modules/stream-http/README.md
+843 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/abort.js
+844 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/auth.js
+845 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/binary-streaming.js
+846 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/binary.js
+847 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/body-empty.js
+848 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/cookie.js
+849 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/disable-fetch.js
+850 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/error.js.disabled
+851 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/headers.js
+852 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/lib/webworker-worker.js
+853 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/package.json
+854 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/post-binary.js
+855 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/post-text.js
+856 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/text-streaming.js
+857 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/text.js
+858 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/timeout.js
+859 silly gunzTarPerm extractEntry node_modules/stream-http/test/browser/webworker.js
+860 silly gunzTarPerm extractEntry node_modules/stream-http/test/node/http-browserify.js
+861 silly gunzTarPerm extractEntry node_modules/stream-http/test/server/index.js
+862 silly gunzTarPerm extractEntry node_modules/stream-http/test/server/static/basic.txt
+863 silly gunzTarPerm extractEntry node_modules/stream-http/test/server/static/browserify.png
+864 silly gunzTarPerm extractEntry node_modules/stream-http/test/server/static/test-polyfill.js
+865 silly gunzTarPerm extractEntry node_modules/string_decoder/.travis.yml
+866 silly gunzTarPerm extractEntry node_modules/string_decoder/lib/string_decoder.js
+867 silly gunzTarPerm extractEntry node_modules/string_decoder/LICENSE
+868 silly gunzTarPerm extractEntry node_modules/string_decoder/package.json
+869 silly gunzTarPerm extractEntry node_modules/string_decoder/README.md
+870 silly gunzTarPerm extractEntry node_modules/timers-browserify/.npmignore
+871 silly gunzTarPerm extractEntry node_modules/timers-browserify/CHANGELOG.md
+872 silly gunzTarPerm extractEntry node_modules/timers-browserify/example/enroll/build.sh
+873 silly gunzTarPerm extractEntry node_modules/timers-browserify/example/enroll/index.html
+874 silly gunzTarPerm extractEntry node_modules/timers-browserify/example/enroll/js/browserify.js
+875 silly gunzTarPerm extractEntry node_modules/timers-browserify/example/enroll/js/main.js
+876 silly gunzTarPerm extractEntry node_modules/timers-browserify/example/enroll/server.js
+877 silly gunzTarPerm extractEntry node_modules/timers-browserify/LICENSE.md
+878 silly gunzTarPerm extractEntry node_modules/timers-browserify/main.js
+879 silly gunzTarPerm extractEntry node_modules/timers-browserify/package.json
+880 silly gunzTarPerm extractEntry node_modules/timers-browserify/README.md
+881 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/.npmignore
+882 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/.travis.yml
+883 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/.zuul.yml
+884 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/index.js
+885 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/LICENSE
+886 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/package.json
+887 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/README.md
+888 silly gunzTarPerm extractEntry node_modules/to-arraybuffer/test.js
+889 silly gunzTarPerm extractEntry node_modules/tty-browserify/index.js
+890 silly gunzTarPerm extractEntry node_modules/tty-browserify/LICENSE
+891 silly gunzTarPerm extractEntry node_modules/tty-browserify/package.json
+892 silly gunzTarPerm extractEntry node_modules/tty-browserify/readme.markdown
+893 silly gunzTarPerm extractEntry node_modules/url/.npmignore
+894 silly gunzTarPerm extractEntry node_modules/url/.travis.yml
+895 silly gunzTarPerm extractEntry node_modules/url/.zuul.yml
+896 silly gunzTarPerm extractEntry node_modules/url/LICENSE
+897 silly gunzTarPerm extractEntry node_modules/url/node_modules/punycode/LICENSE-MIT.txt
+898 silly gunzTarPerm extractEntry node_modules/url/node_modules/punycode/package.json
+899 silly gunzTarPerm extractEntry node_modules/url/node_modules/punycode/punycode.js
+900 silly gunzTarPerm extractEntry node_modules/url/node_modules/punycode/README.md
+901 silly gunzTarPerm extractEntry node_modules/url/package.json
+902 silly gunzTarPerm extractEntry node_modules/url/README.md
+903 silly gunzTarPerm extractEntry node_modules/url/test.js
+904 silly gunzTarPerm extractEntry node_modules/url/url.js
+905 silly gunzTarPerm extractEntry node_modules/url/util.js
+906 silly gunzTarPerm extractEntry node_modules/util-deprecate/browser.js
+907 silly gunzTarPerm extractEntry node_modules/util-deprecate/History.md
+908 silly gunzTarPerm extractEntry node_modules/util-deprecate/LICENSE
+909 silly gunzTarPerm extractEntry node_modules/util-deprecate/node.js
+910 silly gunzTarPerm extractEntry node_modules/util-deprecate/package.json
+911 silly gunzTarPerm extractEntry node_modules/util-deprecate/README.md
+912 silly gunzTarPerm extractEntry node_modules/util/.npmignore
+913 silly gunzTarPerm extractEntry node_modules/util/.travis.yml
+914 silly gunzTarPerm extractEntry node_modules/util/.zuul.yml
+915 silly gunzTarPerm extractEntry node_modules/util/LICENSE
+916 silly gunzTarPerm extractEntry node_modules/util/package.json
+917 silly gunzTarPerm extractEntry node_modules/util/README.md
+918 silly gunzTarPerm extractEntry node_modules/util/support/isBuffer.js
+919 silly gunzTarPerm extractEntry node_modules/util/support/isBufferBrowser.js
+920 silly gunzTarPerm extractEntry node_modules/util/test/browser/inspect.js
+921 silly gunzTarPerm extractEntry node_modules/util/test/browser/is.js
+922 silly gunzTarPerm extractEntry node_modules/util/test/node/debug.js
+923 silly gunzTarPerm extractEntry node_modules/util/test/node/format.js
+924 silly gunzTarPerm extractEntry node_modules/util/test/node/inspect.js
+925 silly gunzTarPerm extractEntry node_modules/util/test/node/log.js
+926 silly gunzTarPerm extractEntry node_modules/util/test/node/util.js
+927 silly gunzTarPerm extractEntry node_modules/util/util.js
+928 silly gunzTarPerm extractEntry node_modules/vm-browserify/example/run/bundle.js
+929 silly gunzTarPerm extractEntry node_modules/vm-browserify/example/run/entry.js
+930 silly gunzTarPerm extractEntry node_modules/vm-browserify/example/run/index.html
+931 silly gunzTarPerm extractEntry node_modules/vm-browserify/example/run/server.js
+932 silly gunzTarPerm extractEntry node_modules/vm-browserify/index.js
+933 silly gunzTarPerm extractEntry node_modules/vm-browserify/LICENSE
+934 silly gunzTarPerm extractEntry node_modules/vm-browserify/package.json
+935 silly gunzTarPerm extractEntry node_modules/vm-browserify/readme.markdown
+936 silly gunzTarPerm extractEntry node_modules/vm-browserify/test/vm.js
+937 silly gunzTarPerm extractEntry node_modules/xtend/.jshintrc
+938 silly gunzTarPerm extractEntry node_modules/xtend/.npmignore
+939 silly gunzTarPerm extractEntry node_modules/xtend/immutable.js
+940 silly gunzTarPerm extractEntry node_modules/xtend/LICENCE
+941 silly gunzTarPerm extractEntry node_modules/xtend/Makefile
+942 silly gunzTarPerm extractEntry node_modules/xtend/mutable.js
+943 silly gunzTarPerm extractEntry node_modules/xtend/package.json
+944 silly gunzTarPerm extractEntry node_modules/xtend/README.md
+945 silly gunzTarPerm extractEntry node_modules/xtend/test.js
+946 silly addBundled read tarball
+947 silly cleanup remove extracted module
+948 silly fetchOtherPackageData brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+949 silly cache add args [ 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+949 silly cache add   null ]
+950 verbose cache add spec brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+951 silly fetchOtherPackageData concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+952 silly cache add args [ 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+952 silly cache add   null ]
+953 verbose cache add spec concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+954 silly fetchOtherPackageData fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+955 silly cache add args [ 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+955 silly cache add   null ]
+956 verbose cache add spec fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+957 silly fetchOtherPackageData glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+958 silly cache add args [ 'glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+958 silly cache add   null ]
+959 verbose cache add spec glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+960 silly fetchOtherPackageData inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+961 silly cache add args [ 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+961 silly cache add   null ]
+962 verbose cache add spec inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+963 silly fetchOtherPackageData minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+964 silly cache add args [ 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+964 silly cache add   null ]
+965 verbose cache add spec minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+966 silly fetchOtherPackageData once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+967 silly cache add args [ 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+967 silly cache add   null ]
+968 verbose cache add spec once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+969 silly fetchOtherPackageData balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+970 silly cache add args [ 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+970 silly cache add   null ]
+971 verbose cache add spec balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+972 silly fetchOtherPackageData path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+973 silly cache add args [ 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+973 silly cache add   null ]
+974 verbose cache add spec path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+975 silly fetchOtherPackageData readable-stream@git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12
+976 silly cache add args [ 'readable-stream@git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+976 silly cache add   null ]
+977 verbose cache add spec readable-stream@git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12
+978 silly fetchOtherPackageData rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+979 silly cache add args [ 'rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+979 silly cache add   null ]
+980 verbose cache add spec rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+981 silly fetchOtherPackageData wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+982 silly cache add args [ 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+982 silly cache add   null ]
+983 verbose cache add spec wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+984 silly cache add parsed spec Result {
+984 silly cache add   raw: 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+984 silly cache add   scope: null,
+984 silly cache add   escapedName: 'brace-expansion',
+984 silly cache add   name: 'brace-expansion',
+984 silly cache add   rawSpec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+984 silly cache add   spec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+984 silly cache add   type: 'remote' }
+985 silly mapToRegistry name brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+986 silly mapToRegistry using default registry
+987 silly mapToRegistry registry https://registry.npmjs.org/
+988 silly mapToRegistry data Result {
+988 silly mapToRegistry   raw: 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+988 silly mapToRegistry   scope: null,
+988 silly mapToRegistry   escapedName: 'brace-expansion',
+988 silly mapToRegistry   name: 'brace-expansion',
+988 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+988 silly mapToRegistry   spec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+988 silly mapToRegistry   type: 'remote' }
+989 silly mapToRegistry uri https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+990 verbose addRemoteTarball https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz not in flight; adding
+991 verbose addRemoteTarball [ 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz',
+991 verbose addRemoteTarball   null ]
+992 silly cache add parsed spec Result {
+992 silly cache add   raw: 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+992 silly cache add   scope: null,
+992 silly cache add   escapedName: 'concat-map',
+992 silly cache add   name: 'concat-map',
+992 silly cache add   rawSpec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+992 silly cache add   spec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+992 silly cache add   type: 'remote' }
+993 silly mapToRegistry name concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+994 silly mapToRegistry using default registry
+995 silly mapToRegistry registry https://registry.npmjs.org/
+996 silly mapToRegistry data Result {
+996 silly mapToRegistry   raw: 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+996 silly mapToRegistry   scope: null,
+996 silly mapToRegistry   escapedName: 'concat-map',
+996 silly mapToRegistry   name: 'concat-map',
+996 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+996 silly mapToRegistry   spec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+996 silly mapToRegistry   type: 'remote' }
+997 silly mapToRegistry uri https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+998 verbose addRemoteTarball https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz not in flight; adding
+999 verbose addRemoteTarball [ 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+999 verbose addRemoteTarball   null ]
+1000 silly cache add parsed spec Result {
+1000 silly cache add   raw: 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1000 silly cache add   scope: null,
+1000 silly cache add   escapedName: 'fs.realpath',
+1000 silly cache add   name: 'fs.realpath',
+1000 silly cache add   rawSpec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1000 silly cache add   spec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1000 silly cache add   type: 'remote' }
+1001 silly mapToRegistry name fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1002 silly mapToRegistry using default registry
+1003 silly mapToRegistry registry https://registry.npmjs.org/
+1004 silly mapToRegistry data Result {
+1004 silly mapToRegistry   raw: 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1004 silly mapToRegistry   scope: null,
+1004 silly mapToRegistry   escapedName: 'fs.realpath',
+1004 silly mapToRegistry   name: 'fs.realpath',
+1004 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1004 silly mapToRegistry   spec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1004 silly mapToRegistry   type: 'remote' }
+1005 silly mapToRegistry uri https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1006 verbose addRemoteTarball https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz not in flight; adding
+1007 verbose addRemoteTarball [ 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+1007 verbose addRemoteTarball   null ]
+1008 silly cache add parsed spec Result {
+1008 silly cache add   raw: 'glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1008 silly cache add   scope: null,
+1008 silly cache add   escapedName: 'glob',
+1008 silly cache add   name: 'glob',
+1008 silly cache add   rawSpec: 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1008 silly cache add   spec: 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1008 silly cache add   type: 'remote' }
+1009 silly mapToRegistry name glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1010 silly mapToRegistry using default registry
+1011 silly mapToRegistry registry https://registry.npmjs.org/
+1012 silly mapToRegistry data Result {
+1012 silly mapToRegistry   raw: 'glob@https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1012 silly mapToRegistry   scope: null,
+1012 silly mapToRegistry   escapedName: 'glob',
+1012 silly mapToRegistry   name: 'glob',
+1012 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1012 silly mapToRegistry   spec: 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz',
+1012 silly mapToRegistry   type: 'remote' }
+1013 silly mapToRegistry uri https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1014 verbose addRemoteTarball https://registry.npmjs.org/glob/-/glob-7.1.2.tgz not in flight; adding
+1015 verbose addRemoteTarball [ 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz', null ]
+1016 silly cache add parsed spec Result {
+1016 silly cache add   raw: 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1016 silly cache add   scope: null,
+1016 silly cache add   escapedName: 'inflight',
+1016 silly cache add   name: 'inflight',
+1016 silly cache add   rawSpec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1016 silly cache add   spec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1016 silly cache add   type: 'remote' }
+1017 silly mapToRegistry name inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1018 silly mapToRegistry using default registry
+1019 silly mapToRegistry registry https://registry.npmjs.org/
+1020 silly mapToRegistry data Result {
+1020 silly mapToRegistry   raw: 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1020 silly mapToRegistry   scope: null,
+1020 silly mapToRegistry   escapedName: 'inflight',
+1020 silly mapToRegistry   name: 'inflight',
+1020 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1020 silly mapToRegistry   spec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1020 silly mapToRegistry   type: 'remote' }
+1021 silly mapToRegistry uri https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1022 verbose addRemoteTarball https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz not in flight; adding
+1023 verbose addRemoteTarball [ 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+1023 verbose addRemoteTarball   null ]
+1024 silly cache add parsed spec Result {
+1024 silly cache add   raw: 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1024 silly cache add   scope: null,
+1024 silly cache add   escapedName: 'minimatch',
+1024 silly cache add   name: 'minimatch',
+1024 silly cache add   rawSpec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1024 silly cache add   spec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1024 silly cache add   type: 'remote' }
+1025 silly mapToRegistry name minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1026 silly mapToRegistry using default registry
+1027 silly mapToRegistry registry https://registry.npmjs.org/
+1028 silly mapToRegistry data Result {
+1028 silly mapToRegistry   raw: 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1028 silly mapToRegistry   scope: null,
+1028 silly mapToRegistry   escapedName: 'minimatch',
+1028 silly mapToRegistry   name: 'minimatch',
+1028 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1028 silly mapToRegistry   spec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1028 silly mapToRegistry   type: 'remote' }
+1029 silly mapToRegistry uri https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1030 verbose addRemoteTarball https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz not in flight; adding
+1031 verbose addRemoteTarball [ 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz',
+1031 verbose addRemoteTarball   null ]
+1032 silly cache add parsed spec Result {
+1032 silly cache add   raw: 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1032 silly cache add   scope: null,
+1032 silly cache add   escapedName: 'once',
+1032 silly cache add   name: 'once',
+1032 silly cache add   rawSpec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1032 silly cache add   spec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1032 silly cache add   type: 'remote' }
+1033 silly mapToRegistry name once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+1034 silly mapToRegistry using default registry
+1035 silly mapToRegistry registry https://registry.npmjs.org/
+1036 silly mapToRegistry data Result {
+1036 silly mapToRegistry   raw: 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1036 silly mapToRegistry   scope: null,
+1036 silly mapToRegistry   escapedName: 'once',
+1036 silly mapToRegistry   name: 'once',
+1036 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1036 silly mapToRegistry   spec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+1036 silly mapToRegistry   type: 'remote' }
+1037 silly mapToRegistry uri https://registry.npmjs.org/once/-/once-1.4.0.tgz
+1038 verbose addRemoteTarball https://registry.npmjs.org/once/-/once-1.4.0.tgz not in flight; adding
+1039 verbose addRemoteTarball [ 'https://registry.npmjs.org/once/-/once-1.4.0.tgz', null ]
+1040 silly cache add parsed spec Result {
+1040 silly cache add   raw: 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1040 silly cache add   scope: null,
+1040 silly cache add   escapedName: 'balanced-match',
+1040 silly cache add   name: 'balanced-match',
+1040 silly cache add   rawSpec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1040 silly cache add   spec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1040 silly cache add   type: 'remote' }
+1041 silly mapToRegistry name balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1042 silly mapToRegistry using default registry
+1043 silly mapToRegistry registry https://registry.npmjs.org/
+1044 silly mapToRegistry data Result {
+1044 silly mapToRegistry   raw: 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1044 silly mapToRegistry   scope: null,
+1044 silly mapToRegistry   escapedName: 'balanced-match',
+1044 silly mapToRegistry   name: 'balanced-match',
+1044 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1044 silly mapToRegistry   spec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1044 silly mapToRegistry   type: 'remote' }
+1045 silly mapToRegistry uri https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1046 verbose addRemoteTarball https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz not in flight; adding
+1047 verbose addRemoteTarball [ 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz',
+1047 verbose addRemoteTarball   null ]
+1048 silly cache add parsed spec Result {
+1048 silly cache add   raw: 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1048 silly cache add   scope: null,
+1048 silly cache add   escapedName: 'path-is-absolute',
+1048 silly cache add   name: 'path-is-absolute',
+1048 silly cache add   rawSpec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1048 silly cache add   spec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1048 silly cache add   type: 'remote' }
+1049 silly mapToRegistry name path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1050 silly mapToRegistry using default registry
+1051 silly mapToRegistry registry https://registry.npmjs.org/
+1052 silly mapToRegistry data Result {
+1052 silly mapToRegistry   raw: 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1052 silly mapToRegistry   scope: null,
+1052 silly mapToRegistry   escapedName: 'path-is-absolute',
+1052 silly mapToRegistry   name: 'path-is-absolute',
+1052 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1052 silly mapToRegistry   spec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1052 silly mapToRegistry   type: 'remote' }
+1053 silly mapToRegistry uri https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1054 verbose addRemoteTarball https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz not in flight; adding
+1055 verbose addRemoteTarball [ 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+1055 verbose addRemoteTarball   null ]
+1056 silly cache add parsed spec Result {
+1056 silly cache add   raw: 'readable-stream@git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add   scope: null,
+1056 silly cache add   escapedName: 'readable-stream',
+1056 silly cache add   name: 'readable-stream',
+1056 silly cache add   rawSpec: 'git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add   spec: 'git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add   type: 'hosted',
+1056 silly cache add   hosted:
+1056 silly cache add    { type: 'github',
+1056 silly cache add      ssh: 'git@github.com:meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add      sshUrl: 'git+ssh://git@github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add      httpsUrl: 'git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add      gitUrl: 'git://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add      shortcut: 'github:meteor/readable-stream#c688cdd193549919b840e8d72a86682d91961e12',
+1056 silly cache add      directUrl: 'https://raw.githubusercontent.com/meteor/readable-stream/c688cdd193549919b840e8d72a86682d91961e12/package.json' } }
+1057 verbose addRemoteGit caching git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12
+1058 verbose addRemoteGit git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12 is a repository hosted by github
+1059 silly tryClone cloning git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12 via git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12
+1060 verbose tryClone git-https-github-com-meteor-readable-stream-git-c688cdd193549919b840e8d72a86682d91961e12-ede818cf not in flight; caching
+1061 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes correctMkdir not in flight; initializing
+1062 silly cache add parsed spec Result {
+1062 silly cache add   raw: 'rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1062 silly cache add   scope: null,
+1062 silly cache add   escapedName: 'rimraf',
+1062 silly cache add   name: 'rimraf',
+1062 silly cache add   rawSpec: 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1062 silly cache add   spec: 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1062 silly cache add   type: 'remote' }
+1063 silly mapToRegistry name rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1064 silly mapToRegistry using default registry
+1065 silly mapToRegistry registry https://registry.npmjs.org/
+1066 silly mapToRegistry data Result {
+1066 silly mapToRegistry   raw: 'rimraf@https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1066 silly mapToRegistry   scope: null,
+1066 silly mapToRegistry   escapedName: 'rimraf',
+1066 silly mapToRegistry   name: 'rimraf',
+1066 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1066 silly mapToRegistry   spec: 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz',
+1066 silly mapToRegistry   type: 'remote' }
+1067 silly mapToRegistry uri https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1068 verbose addRemoteTarball https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz not in flight; adding
+1069 verbose addRemoteTarball [ 'https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz', null ]
+1070 silly cache add parsed spec Result {
+1070 silly cache add   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1070 silly cache add   scope: null,
+1070 silly cache add   escapedName: 'wrappy',
+1070 silly cache add   name: 'wrappy',
+1070 silly cache add   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1070 silly cache add   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1070 silly cache add   type: 'remote' }
+1071 silly mapToRegistry name wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1072 silly mapToRegistry using default registry
+1073 silly mapToRegistry registry https://registry.npmjs.org/
+1074 silly mapToRegistry data Result {
+1074 silly mapToRegistry   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1074 silly mapToRegistry   scope: null,
+1074 silly mapToRegistry   escapedName: 'wrappy',
+1074 silly mapToRegistry   name: 'wrappy',
+1074 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1074 silly mapToRegistry   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+1074 silly mapToRegistry   type: 'remote' }
+1075 silly mapToRegistry uri https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1076 verbose addRemoteTarball https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+1077 verbose addRemoteTarball [ 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz', null ]
+1078 verbose makeDirectory /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes creation not in flight; initializing
+1079 silly makeDirectory /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes uid: 1000 gid: 1000
+1080 info retry fetch attempt 1 at 12:09:55 PM
+1081 info attempt registry request try #1 at 12:09:55 PM
+1082 http fetch GET https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+1083 info retry fetch attempt 1 at 12:09:55 PM
+1084 info attempt registry request try #1 at 12:09:55 PM
+1085 http fetch GET https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+1086 info retry fetch attempt 1 at 12:09:55 PM
+1087 info attempt registry request try #1 at 12:09:55 PM
+1088 http fetch GET https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1089 info retry fetch attempt 1 at 12:09:55 PM
+1090 info attempt registry request try #1 at 12:09:55 PM
+1091 http fetch GET https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1092 info retry fetch attempt 1 at 12:09:55 PM
+1093 info attempt registry request try #1 at 12:09:55 PM
+1094 http fetch GET https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1095 info retry fetch attempt 1 at 12:09:55 PM
+1096 info attempt registry request try #1 at 12:09:55 PM
+1097 http fetch GET https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1098 info retry fetch attempt 1 at 12:09:55 PM
+1099 info attempt registry request try #1 at 12:09:55 PM
+1100 http fetch GET https://registry.npmjs.org/once/-/once-1.4.0.tgz
+1101 info retry fetch attempt 1 at 12:09:55 PM
+1102 info attempt registry request try #1 at 12:09:55 PM
+1103 http fetch GET https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1104 info retry fetch attempt 1 at 12:09:55 PM
+1105 info attempt registry request try #1 at 12:09:55 PM
+1106 http fetch GET https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1107 info retry fetch attempt 1 at 12:09:55 PM
+1108 info attempt registry request try #1 at 12:09:55 PM
+1109 http fetch GET https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1110 info retry fetch attempt 1 at 12:09:55 PM
+1111 info attempt registry request try #1 at 12:09:55 PM
+1112 http fetch GET https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1113 http fetch 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+1114 http fetch 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+1115 silly fetchAndShaCheck shasum 3c7fcbf529d87226f3d2f52b966ff5271eb441dd
+1116 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz not in flight; adding
+1117 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1118 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+1119 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz
+1120 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-4faa3cef
+1121 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-4faa3cef is being purged
+1122 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-4faa3cef
+1123 silly gunzTarPerm modes [ '755', '644' ]
+1124 silly fetchAndShaCheck shasum d8a96bd77fd68df7793a73036a3ba0d5405d477b
+1125 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz not in flight; adding
+1126 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1127 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+1128 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+1129 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-c13d9a8f
+1130 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-c13d9a8f is being purged
+1131 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-c13d9a8f
+1132 silly gunzTarPerm modes [ '755', '644' ]
+1133 silly gunzTarPerm extractEntry package.json
+1134 silly gunzTarPerm extractEntry package.json
+1135 silly gunzTarPerm extractEntry index.js
+1136 silly gunzTarPerm extractEntry LICENSE
+1137 silly gunzTarPerm extractEntry LICENSE
+1138 silly gunzTarPerm extractEntry index.js
+1139 silly gunzTarPerm extractEntry README.md
+1140 http fetch 200 https://registry.npmjs.org/once/-/once-1.4.0.tgz
+1141 silly gunzTarPerm extractEntry .travis.yml
+1142 silly gunzTarPerm extractEntry README.markdown
+1143 http fetch 200 https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1144 http fetch 200 https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1145 http fetch 200 https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1146 http fetch 200 https://registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1147 http fetch 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1148 http fetch 200 https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1149 http fetch 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1150 silly fetchAndShaCheck shasum 583b1aa775961d4b113ac17d9c50baef9dd76bd1
+1151 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/once/-/once-1.4.0.tgz not in flight; adding
+1152 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1153 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/once/-/once-1.4.0.tgz
+1154 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/once/-/once-1.4.0.tgz
+1155 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-613fb747
+1156 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-613fb747 is being purged
+1157 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-613fb747
+1158 silly gunzTarPerm modes [ '755', '644' ]
+1159 silly gunzTarPerm extractEntry example/map.js
+1160 silly gunzTarPerm extractEntry test/map.js
+1161 silly fetchAndShaCheck shasum 49bd6331d7d02d0c09bc910a1075ba8165b56df9
+1162 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz not in flight; adding
+1163 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1164 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1165 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+1166 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-032778c8
+1167 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-032778c8 is being purged
+1168 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-032778c8
+1169 silly fetchAndShaCheck shasum 1504ad2523158caa40db4a2787cb01411994ea4f
+1170 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz not in flight; adding
+1171 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1172 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1173 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+1174 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-aaaff775
+1175 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-aaaff775 is being purged
+1176 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-aaaff775
+1177 silly gunzTarPerm modes [ '755', '644' ]
+1178 silly gunzTarPerm modes [ '755', '644' ]
+1179 silly fetchAndShaCheck shasum 89b4d199ab2bee49de164ea02b89ce462d71b767
+1180 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz not in flight; adding
+1181 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1182 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1183 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz
+1184 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-14366f83
+1185 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-14366f83 is being purged
+1186 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-14366f83
+1187 silly gunzTarPerm modes [ '755', '644' ]
+1188 silly fetchAndShaCheck shasum 174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
+1189 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz not in flight; adding
+1190 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1191 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1192 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+1193 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-3d20cb99
+1194 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-3d20cb99 is being purged
+1195 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-3d20cb99
+1196 silly fetchAndShaCheck shasum 2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36
+1197 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz not in flight; adding
+1198 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1199 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1200 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz
+1201 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-ba7d220c
+1202 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-ba7d220c is being purged
+1203 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-ba7d220c
+1204 silly gunzTarPerm modes [ '755', '644' ]
+1205 silly gunzTarPerm modes [ '755', '644' ]
+1206 silly fetchAndShaCheck shasum b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+1207 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+1208 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1209 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1210 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+1211 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-8d01be23
+1212 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-8d01be23 is being purged
+1213 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-8d01be23
+1214 silly gunzTarPerm extractEntry package.json
+1215 silly gunzTarPerm modes [ '755', '644' ]
+1216 error git clone --template=/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes/_templates --mirror https://github.com/meteor/readable-stream.git /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes/git-https-github-com-meteor-readable-stream-git-c688cdd193549919b840e8d72a86682d91961e12-ede818cf: undefined
+1216 error git clone --template=/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes/_templates --mirror https://github.com/meteor/readable-stream.git /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/_git-remotes/git-https-github-com-meteor-readable-stream-git-c688cdd193549919b840e8d72a86682d91961e12-ede818cf: undefined
+1217 silly fetchPackageMetaData Error: not found: git
+1217 silly fetchPackageMetaData     at getNotFoundError (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:14:12)
+1217 silly fetchPackageMetaData     at F (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:69:19)
+1217 silly fetchPackageMetaData     at E (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:81:29)
+1217 silly fetchPackageMetaData     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:90:16
+1217 silly fetchPackageMetaData     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/node_modules/isexe/index.js:44:5
+1217 silly fetchPackageMetaData     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/node_modules/isexe/access.js:8:5
+1217 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+1217 silly fetchPackageMetaData  error for readable-stream@git+https://github.com/meteor/readable-stream.git#c688cdd193549919b840e8d72a86682d91961e12 { [Error: not found: git] code: 'ENOGIT' }
+1218 silly gunzTarPerm extractEntry package.json
+1219 silly gunzTarPerm extractEntry package.json
+1220 silly fetchAndShaCheck shasum c19c9df9a028702d678612384a6552404c636d15
+1221 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/glob/-/glob-7.1.2.tgz not in flight; adding
+1222 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1223 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1224 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/glob/-/glob-7.1.2.tgz
+1225 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-64646d36
+1226 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-64646d36 is being purged
+1227 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-64646d36
+1228 silly gunzTarPerm extractEntry package.json
+1229 silly gunzTarPerm extractEntry README.md
+1230 silly gunzTarPerm extractEntry LICENSE
+1231 silly gunzTarPerm modes [ '755', '644' ]
+1232 silly gunzTarPerm extractEntry package.json
+1233 silly gunzTarPerm extractEntry package.json
+1234 silly gunzTarPerm extractEntry README.md
+1235 silly gunzTarPerm extractEntry LICENSE
+1236 silly gunzTarPerm extractEntry README.md
+1237 silly gunzTarPerm extractEntry LICENSE
+1238 silly gunzTarPerm extractEntry package.json
+1239 silly gunzTarPerm extractEntry .npmignore
+1240 silly gunzTarPerm extractEntry README.md
+1241 silly gunzTarPerm extractEntry index.js
+1242 silly gunzTarPerm extractEntry license
+1243 silly gunzTarPerm extractEntry bin.js
+1244 silly gunzTarPerm extractEntry LICENSE
+1245 silly gunzTarPerm extractEntry README.md
+1246 silly gunzTarPerm extractEntry LICENSE
+1247 silly gunzTarPerm extractEntry package.json
+1248 silly gunzTarPerm extractEntry once.js
+1249 silly gunzTarPerm extractEntry README.md
+1250 silly gunzTarPerm extractEntry LICENSE
+1251 silly gunzTarPerm extractEntry common.js
+1252 silly gunzTarPerm extractEntry glob.js
+1253 silly gunzTarPerm extractEntry sync.js
+1254 silly gunzTarPerm extractEntry changelog.md
+1255 silly gunzTarPerm extractEntry inflight.js
+1256 silly gunzTarPerm extractEntry index.js
+1257 silly gunzTarPerm extractEntry old.js
+1258 silly gunzTarPerm extractEntry index.js
+1259 silly gunzTarPerm extractEntry LICENSE.md
+1260 silly gunzTarPerm extractEntry readme.md
+1261 silly gunzTarPerm extractEntry README.md
+1262 silly gunzTarPerm extractEntry rimraf.js
+1263 silly gunzTarPerm extractEntry wrappy.js
+1264 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1265 http fetch 200 https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1266 silly fetchAndShaCheck shasum 5166e286457f03306064be5497e8dbb0c3d32083
+1267 verbose addTmpTarball /tmp/npm-30-48ef8aa8/registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz not in flight; adding
+1268 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1269 verbose addTmpTarball validating metadata from /tmp/npm-30-48ef8aa8/registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1270 verbose tar unpack /tmp/npm-30-48ef8aa8/registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz
+1271 verbose tar unpacking to /tmp/npm-30-48ef8aa8/unpack-4dfd4d3d
+1272 silly gentlyRm /tmp/npm-30-48ef8aa8/unpack-4dfd4d3d is being purged
+1273 verbose gentlyRm don't care about contents; nuking /tmp/npm-30-48ef8aa8/unpack-4dfd4d3d
+1274 silly gunzTarPerm modes [ '755', '644' ]
+1275 silly gunzTarPerm extractEntry package.json
+1276 silly gunzTarPerm extractEntry README.md
+1277 silly gunzTarPerm extractEntry LICENSE
+1278 silly cache afterAdd brace-expansion@1.1.11
+1279 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/brace-expansion/1.1.11/package/package.json not in flight; writing
+1280 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1281 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1282 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1283 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/brace-expansion/1.1.11/package/package.json written
+1284 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1285 silly gunzTarPerm extractEntry minimatch.js
+1286 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1287 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1288 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1289 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1290 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1291 silly cache afterAdd once@1.4.0
+1292 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/once/1.4.0/package/package.json not in flight; writing
+1293 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1294 silly cache afterAdd inflight@1.0.6
+1295 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/inflight/1.0.6/package/package.json not in flight; writing
+1296 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1297 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/once/1.4.0/package/package.json written
+1298 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/inflight/1.0.6/package/package.json written
+1299 silly cache afterAdd wrappy@1.0.2
+1300 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/wrappy/1.0.2/package/package.json not in flight; writing
+1301 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1302 silly cache afterAdd balanced-match@1.0.0
+1303 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/balanced-match/1.0.0/package/package.json not in flight; writing
+1304 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1305 silly cache afterAdd fs.realpath@1.0.0
+1306 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/fs.realpath/1.0.0/package/package.json not in flight; writing
+1307 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1308 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/wrappy/1.0.2/package/package.json written
+1309 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/balanced-match/1.0.0/package/package.json written
+1310 silly cache afterAdd rimraf@2.6.2
+1311 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/rimraf/2.6.2/package/package.json not in flight; writing
+1312 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1313 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/fs.realpath/1.0.0/package/package.json written
+1314 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1315 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/rimraf/2.6.2/package/package.json written
+1316 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1317 silly cache afterAdd glob@7.1.2
+1318 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/glob/7.1.2/package/package.json not in flight; writing
+1319 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1320 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/glob/7.1.2/package/package.json written
+1321 silly cache afterAdd concat-map@0.0.1
+1322 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/concat-map/0.0.1/package/package.json not in flight; writing
+1323 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1324 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/concat-map/0.0.1/package/package.json written
+1325 silly cache afterAdd path-is-absolute@1.0.1
+1326 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/path-is-absolute/1.0.1/package/package.json not in flight; writing
+1327 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1328 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/path-is-absolute/1.0.1/package/package.json written
+1329 silly cache afterAdd minimatch@3.0.4
+1330 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/minimatch/3.0.4/package/package.json not in flight; writing
+1331 verbose correctMkdir /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm correctMkdir not in flight; initializing
+1332 verbose afterAdd /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/.npm/minimatch/3.0.4/package/package.json written
+1333 silly rollbackFailedOptional Starting
+1334 silly rollbackFailedOptional Finishing
+1335 silly runTopLevelLifecycles Finishing
+1336 silly install printInstalled
+1337 verbose stack Error: not found: git
+1337 verbose stack     at getNotFoundError (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:14:12)
+1337 verbose stack     at F (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:69:19)
+1337 verbose stack     at E (/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:81:29)
+1337 verbose stack     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/which.js:90:16
+1337 verbose stack     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/node_modules/isexe/index.js:44:5
+1337 verbose stack     at /home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/lib/node_modules/npm/node_modules/which/node_modules/isexe/access.js:8:5
+1337 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+1338 verbose cwd /app
+1339 error Linux 4.9.87-linuxkit-aufs
+1340 error argv "/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node" "/home/app/.meteor/packages/meteor-tool/.1.4.2_3.17tso1e++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm" "install"
+1341 error node v4.6.2
+1342 error npm  v3.10.9
+1343 error code ENOGIT
+1344 error not found: git
+1345 error Failed using git.
+1345 error This is most likely not a problem with npm itself.
+1345 error Please check if you have git installed and in your PATH.
+1346 verbose exit [ 1, true ]

@@ -1,0 +1,35 @@
+<template name="control-panel">
+    <div class="row">
+        <div class="col-sm-6">
+            {{> insertRepresentationForm }}
+        </div>
+        <div class="col-sm-6">
+            {{> insertShowForm }}
+        </div>
+    </div>
+</template>
+
+<template name="insertRepresentationForm">
+    {{#autoForm collection="Representations" id="createRepresentationForm" type="insert"}}
+        <fieldset>
+            <legend>Add a Representation for a show</legend>
+            {{> afQuickField name='labyrinth'}}
+            {{> afQuickField name='date'}}
+            {{> afQuickField name='startingTime' type="time"}}
+            {{> afQuickField name='endingTime' type="time"}}
+            {{> afQuickField name='location'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+</template>
+
+<template name="insertShowForm">
+    {{#autoForm collection="Labyrinths" id="createShowForm" type="insert"}}
+        <fieldset>
+            <legend>Add a show</legend>
+            {{> afQuickField name='title'}}
+            {{> afQuickField name='summary'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
+</template>

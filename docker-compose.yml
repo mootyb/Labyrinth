@@ -1,0 +1,21 @@
+version: '3'
+services:
+  laby:
+    build: .
+    ports:
+      - "3000:3000"
+    logging:
+      options:
+        max-size: "10k"
+        max-file: "1"
+    volumes:
+      - .:/app
+    environment:
+      MONGO_URL: mongodb://meteor:meteor@mongo:27017
+
+  mongo:
+    image: mongo:3-jessie
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: meteor
+      MONGO_INITDB_ROOT_PASSWORD: meteor

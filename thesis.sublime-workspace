@@ -1,0 +1,502 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"animated",
+				"animatedModal"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"img",
+				"border-image"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"article",
+				"article-listing"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"bord",
+				"border-box"
+			],
+			[
+				"s",
+				"src"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 150.0,
+		"selected_items":
+		[
+			[
+				"prefe",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/thesis/labyrinth/Dockerfile",
+		"/G/thesis/labyrinth/docker-compose.yml",
+		"/G/thesis/labyrinth/client/templates/personal-profile.html",
+		"/G/thesis/labyrinth/personal-profile.html",
+		"/G/thesis/labyrinth/lib/schemas/representations.js",
+		"/G/thesis/labyrinth/lib/schemas/bookings.js",
+		"/G/thesis/labyrinth/lib/collections.js",
+		"/C/Users/Mooty/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/G/thesis/labyrinth/client/templates/personal-profile.js",
+		"/G/thesis/labyrinth/personal-profile.js",
+		"/G/thesis/labyrinth/.meteor/packages",
+		"/G/thesis/labyrinth/.meteor/versions",
+		"/G/web/re_cat/js/bootstrap.min.js",
+		"/C/Users/Mooty/AppData/Local/Temp/scp46078/public_html/index.php",
+		"/G/web/re_cda_service/footer.php",
+		"/G/web/re_cda_service/page.php",
+		"/G/web/re_evo/content-listing.php",
+		"/G/web/re_evo/template-parts/content-listing.php",
+		"/G/web/re_evo - Copy/footer.php",
+		"/G/web/re_evo/footer.php",
+		"/G/web/re_evo/functions.php",
+		"/G/web/re_evo/page-home.php",
+		"/G/web/re_evo2/footer.php",
+		"/G/web/re_evo_BK/page-home.php",
+		"/G/web/re_evo/category-portfolio.php",
+		"/G/web/re_evo/template-parts/content.php",
+		"/G/web/re_evo/page.php",
+		"/G/web/re_evo/inc/template-tags.php",
+		"/G/web/re_evo/modal.php",
+		"/G/web/re_evo/template-parts/content-page.php",
+		"/G/web/re_evo/single.php",
+		"/G/web/re_evo/header-home.php",
+		"/G/web/re_evo/header.php",
+		"/G/web/re_evo/page-sub.php",
+		"/G/web/re_evo/js/navigation.js",
+		"/G/web/re_evo/js/custom.js",
+		"/G/web/re_evo/js/bootstrap.min.js",
+		"/G/web/re_evo/js/skip-link-focus-fix.js",
+		"/G/web/re_evo/archive.php",
+		"/G/web/re_evo/template-parts/content-notitle.php",
+		"/G/web/archive.php",
+		"/G/web/re_evo/template-parts/content-subpage.php",
+		"/G/web/re_evo/page-home3.php",
+		"/G/web/re_evo/search.php",
+		"/G/web/re_evo/template-parts/content-listing3.php",
+		"/G/web/re_evo/phpcs.xml.dist",
+		"/G/web/re_cat/comments.php",
+		"/G/web/re_evo/template-parts/content-listing2.php",
+		"/G/web/video-pause-modal-trick",
+		"/G/web/re_cat/css/bootstrap.css",
+		"/G/web/re_cat/index.php",
+		"/G/web/re_cat/header.php",
+		"/G/web/re_cat/template-parts/content-article.php",
+		"/G/web/re_cat/template-parts/content-listing.php",
+		"/G/web/re_cat/template-parts/content-artists.php",
+		"/G/web/re_cat/archive.php",
+		"/G/web/re_cat/animatedModal.html",
+		"/G/web/re_cat/js/animatedModal.html",
+		"/G/web/re_cat/js/jquery.flexslider.js",
+		"/G/web/re_chmd/functions.php",
+		"/G/web/re_cat/page.php",
+		"/C/Users/Mooty/Documents/tmp/reveal.js-master/reveal.js-master/index.html",
+		"/G/web/re_cat/footer.php",
+		"/G/web/re_cat/single.php",
+		"/G/web/re_cat/template-parts/content-home.php",
+		"/G/web/re_cat/js/navi.js",
+		"/C/Users/Mooty/Documents/tmp/reveal.js-master/reveal.js-master/pres.md",
+		"/C/Users/Mooty/Documents/tmp/reveal.js-master/reveal.js-master/demo.html",
+		"/G/web/re_cat/style.css",
+		"/G/web/archivei4.php",
+		"/G/web/re_cat/page-home.php",
+		"/G/web/re_cat/functions.php",
+		"/G/web/re_par/template-parts/content-listing.php",
+		"/G/web/re_cat/template-parts/content.php",
+		"/G/web/re_cat/template-parts/content-search.php",
+		"/G/web/re_cat/template-parts/content-page.php",
+		"/G/web/re_cat/template-parts/content-none.php",
+		"/C/Users/Mooty/_/test.asylumlabyrinth.ro/wp-content/themes/jupiter/views/header/toolbar/subscribe.php",
+		"/G/web/re_par/single-form.php",
+		"/G/web/gingerbakery/re_ginger/header.php",
+		"/G/web/gingerbakery/re_ginger/single.php",
+		"/G/web/gingerbakery/re_ginger/footer.php",
+		"/G/web/gingerbakery/re_ginger/archive.php",
+		"/G/web/gingerbakery/re_ginger/functions.php",
+		"/G/web/gingerbakery/re_ginger/style.css",
+		"/G/web/wordpress/wp-config.php",
+		"/G/web/Premium Wordpress Theme _ Altair_files/grid.css",
+		"/G/web/gingerbakery/wp-config.php",
+		"/G/web/gingerbakery/re_ginger/languages/re_ginger.pot",
+		"/G/web/VIP/re_vip/style.css",
+		"/G/web/VIP/re_vip/header.php",
+		"/G/web/VIP/re_vip/functions.php",
+		"/G/web/VIP/re_sell/functions.php",
+		"/G/web/VIP/re_vip/header-home.php",
+		"/G/web/VIP/re_vip/footer.php",
+		"/G/web/VIP/re_vip/js/jquery.flexslider.js",
+		"/G/web/VIP/wp-config.php",
+		"/G/web/re_vip/functions.php",
+		"/G/web/re_vip/woocommerce/woocommerce.css",
+		"/C/Users/Mooty/AppData/Local/Temp/Temp1_re_sell.carla-prati.zip/re_sell.carla-prati/functions.php",
+		"/G/web/re_sell.carla-prati/functions.php",
+		"/G/web/gingerbakery/re_ginger/template-parts/content-listing.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/template-parts/content-listing.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/single.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/archive.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/template-parts/content-detail.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/style.css",
+		"/G/learning stuff/web/gingerbakery/re_ginger/functions.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/header.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/footer.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/template-parts/content.php",
+		"/G/learning stuff/web/gingerbakery/re_ginger/page-home.php",
+		"/G/web/mooty-dev/re_folio/style.css",
+		"/G/web/mooty-dev/re_folio/functions.php",
+		"/G/Downloads/workshop2.docx",
+		"/G/web/DMB/widgets after/about.html",
+		"/G/Downloads/menu-buttons.php",
+		"/C/Users/Mooty/Desktop/menu-buttons.php",
+		"/G/Downloads/menu-buttons (1).php",
+		"/G/web/mooty-dev/re_folio/footer.php",
+		"/G/web/mooty-dev/re_folio/index.php",
+		"/G/web/mooty-dev/re_folio/archive.php",
+		"/G/web/mooty-dev/re_folio/yith-infinite-scrolling/assets/js/yith.infinitescroll.js",
+		"/G/web/mooty-dev/re_folio/header.php",
+		"/G/web/mooty-dev/re_folio/page.php",
+		"/G/web/mooty-dev/re_folio/js/masonry.pkgd.js",
+		"/G/web/mooty-dev/re_folio/js/load-more.js",
+		"/G/web/mooty-dev/re_folio/yith-infinite-scrolling/init.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"<open folders>,G:\\web\\gingerbakery\\re_ginger",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"scroll",
+			"logo",
+			"the_custom_logo",
+			"vid",
+			"video-foreground",
+			"top",
+			"home-vid",
+			"container",
+			"entry-header",
+			"category",
+			"Category",
+			"entry_footer",
+			"category",
+			"home-vid",
+			"a:focus",
+			"Primary Menu",
+			"navigation",
+			"contain",
+			"page-sub",
+			"services",
+			"solid",
+			"logo",
+			"modal-content",
+			"logo",
+			"navigation",
+			"site-header",
+			"header",
+			"header ",
+			"content-area",
+			"container",
+			" a ",
+			"mian-na",
+			"masthead",
+			".article-listing ",
+			"article-lis",
+			".portofolio-article",
+			"33",
+			"close-modal",
+			"close",
+			"modalIndex",
+			"featured-ima",
+			"listing-article",
+			"post-thumbnail",
+			"edit-link",
+			"listing-article-title",
+			"vid.contentWindow.postMess",
+			"modal fade",
+			"#",
+			"yt-vid-modal",
+			"close-modal-01",
+			"animatedModal",
+			"myModal1",
+			"animatedModal",
+			"modal",
+			"btn-close-modal",
+			"animatedIn:'animatedIn',\n	    animatedOut:'zoomOut',",
+			"$(\"#demo01\").animatedModal({\n	    modalTarget:'modal-01',\n	    animatedIn:'animatedIn',\n	    animatedOut:'zoomOut',\n	    color:'#000',\n	    // Callbacks\n	    beforeOpen: function() {\n	        console.log(\"The animation was called\");\n	    },           \n	    afterOpen: function() {\n	        console.log(\"The animation is completed\");\n	    }, \n	    beforeClose: function() {\n	        console.log(\"The animation was called\");\n	    }, \n	    afterClose: function() {\n	        console.log(\"The animation is completed\");\n	    }\n	});",
+			"css",
+			"site-navigation",
+			"navigation",
+			"listing-thumbnail",
+			"markdo",
+			"wrapper",
+			"colophon",
+			" a ",
+			"a ",
+			"article-title",
+			"ul ",
+			"flexslider",
+			"header",
+			"masthead",
+			"primary",
+			"masthead",
+			"main-na",
+			"flex",
+			"navi",
+			"nav-do",
+			"Header",
+			"header",
+			"entry-footer",
+			"entry-header",
+			"col",
+			"font",
+			"entr",
+			"navi",
+			"section group",
+			"entry-header",
+			"article",
+			".main-navigation li",
+			"main-na",
+			"a ",
+			"a",
+			"links",
+			"articles",
+			"article-",
+			"article-li",
+			"re_ginger_scripts",
+			";\n",
+			"menu-product-navigation-container",
+			"product-navigation",
+			"main-navigation",
+			".menu-toggle",
+			"Products Menu",
+			"Product Navigation",
+			"Primary Menu",
+			"Product Menu",
+			"Primary Menu",
+			"product-navigation",
+			"site-logo",
+			"site-branding",
+			"hero",
+			"open",
+			"Open Sans",
+			"Open",
+			"open",
+			"after_setup_theme",
+			"re_",
+			"modal",
+			"post-meta",
+			"demo02",
+			"modal",
+			"grid",
+			"post-listing",
+			"dfbfd",
+			"post-listing",
+			"be_post_summary()",
+			"enque",
+			"jquery"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 234.0,
+	"status_bar_visible": true
+}
