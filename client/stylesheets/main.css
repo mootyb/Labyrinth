@@ -1,0 +1,64 @@
+/*.wrapper{
+	position: relative;
+}
+
+.navbar{
+	position: absolute;
+	display: inline-block;
+}*/
+
+#book {
+	background: url('/assets/images/book.png') no-repeat;
+	position: absolute;
+	width: 830px;
+	height: 260px;
+	left: 50%;
+	top: 50%;
+	margin-left: -400px;
+	margin-top: -125px;
+	display: inline-block;
+}
+
+#pages section {
+	background: url('/assets/images/paper.png') no-repeat;
+	display: block;
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	left: 415px;
+	top: 5px;
+	overflow: hidden;
+}
+	#pages section>div {
+		display: block;
+		width: 400px;
+		height: 250px;
+		font-size: 12px;
+	}
+	#pages section p,
+	#pages section h2 {
+		padding: 3px 35px;
+		line-height: 1.4em;
+		text-align: justify;
+	}
+	#pages section h2{
+		margin: 15px 0 10px;
+	}
+
+#pageflip-canvas {
+	position: absolute;
+	z-index: 100;
+}
+
+.page-footer{
+	position: fixed;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+	bottom: 0;		
+	height: 120px;
+}
+
+.container-fluid{
+	padding-top: 20px;
+}
