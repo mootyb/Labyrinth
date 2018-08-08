@@ -1,4 +1,5 @@
 Meteor.startup(function () {
+
    if(!Meteor.users.findOne({
        username: "admin"
    })) {
@@ -8,4 +9,20 @@ Meteor.startup(function () {
            password: "admin"
        })
    }
+
+	if(!Representations.findOne()) {
+	 	 console.log("Generating representation")
+		 const start = new Date(), end = new Date()
+		 start.setHours(8)
+		 start.setMinutes(0)
+		 end.setHours(18)
+		 end.setMinutes(0)
+		 Representations.insert({
+		   labyrinth: "Test lab",
+		   date: new Date(), // Today
+		   startingTime: start,
+		   endingTime: end,
+		   location: "Timisoara"
+		 })
+	}
 });
