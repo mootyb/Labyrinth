@@ -1,33 +1,40 @@
-/*.wrapper{
-	position: relative;
-}
+/*
 
 .navbar{
 	position: absolute;
 	display: inline-block;
 }*/
 
+.wrapper{
+	position: relative;
+	width:80%;
+	margin: auto;
+    margin-top: 40px;	
+    padding-bottom: 170px;
+}
+
 #book {
-	background: url('/assets/images/book.png') no-repeat;
-	position: absolute;
-	width: 830px;
-	height: 260px;
-	left: 50%;
-	top: 50%;
-	margin-left: -400px;
-	margin-top: -125px;
-	display: inline-block;
+	background: url('/assets/images/book2.png') no-repeat;
+	position: relative;
+	width: 1036px;
+	height: 606px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    left: 100px;
+	z-index: -98;
 }
 
 #pages section {
-	background: url('/assets/images/paper.png') no-repeat;
+	background: url('/assets/images/page1.png') no-repeat;
 	display: block;
-	width: 400px;
-	height: 250px;
+	width: 1036px;
+	height: 750px;
 	position: absolute;
-	left: 415px;
-	top: 5px;
+	left: 15px;
+	top: 0px;
 	overflow: hidden;
+	z-index: -90;
 }
 	#pages section>div {
 		display: block;
@@ -35,20 +42,12 @@
 		height: 250px;
 		font-size: 12px;
 	}
-	#pages section p,
-	#pages section h2 {
-		padding: 3px 35px;
-		line-height: 1.4em;
-		text-align: justify;
-	}
-	#pages section h2{
-		margin: 15px 0 10px;
-	}
 
 #pageflip-canvas {
 	position: absolute;
 	z-index: 100;
 }
+
 
 .page-footer{
 	position: fixed;
@@ -57,8 +56,32 @@
 	width: 100%;
 	bottom: 0;		
 	height: 120px;
+	z-index: 0;
 }
 
 .container-fluid{
 	padding-top: 20px;
+}
+
+h4, h5, h2{
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.block{
+	position:relative;
+}
+
+.block img{
+	margin: auto;
+    width: 80%;
+    display: block;
+}
+
+@media (max-width: 646px){
+	#book{
+	width:540px; /* you can use % */
+    height: auto;
+    left:0px;
+	}
 }

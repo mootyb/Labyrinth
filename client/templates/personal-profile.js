@@ -46,13 +46,13 @@ function update(data, options, override) {
 
 
 Template['personal-profile'].helpers({
-    isAdmin() {
+    isAdmin: function() {
         return userName() === 'admin';
     },
-    submittedR() {
+    submittedR: function() {
         return hasSubmittedR.get();
     },
-    submittedS() {
+    submittedS: function() {
         return hasSubmittedS.get();
     }
 });

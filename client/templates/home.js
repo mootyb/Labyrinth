@@ -49,9 +49,13 @@ function getSelectedIds() {
 const _clickedNext = new ReactiveVar(false);
 const _clickedSaveAns = new ReactiveVar(false);
 
+
+
+//--------------------HELPERS-----------------------
 Template.reservationTable.helpers({
     userName, //included from the global function
-    bookingsAboutToExpire() {
+
+    bookingsAboutToExpire:function() {
         const fourMinutesAgo = new Date(new Date().getTime() - 4 * 60000)
         return !!(Bookings.findOne({ // "!!" converts to boolean
             name: userName(),
@@ -61,7 +65,7 @@ Template.reservationTable.helpers({
         }))
     },
 
-    bookingExpired() {
+    bookingExpired:function() {
         const fiveMinutesAgo = new Date(new Date().getTime() - 5 * 60000)
         return !!(Bookings.findOne({
             name: userName(),
@@ -87,17 +91,17 @@ Template.reservationTable.helpers({
         return hours;
     },
 
-    isSelected(hour, slice) {
+    isSelected: function(hour, slice) {
         const time = hour + ':' + slice;
         return _isSelected(time)
     },
-    isBooked(hour, slice) {
+    isBooked: function(hour, slice) {
         const time = hour + ':' + slice;
         return _isBooked(time)
     },
 
     //if the current user has only confirmed bookings
-    hasSaved() {
+    hasSaved: function() {
         if (Bookings.find({
             isConfirmedUser: false,
             name: userName()
@@ -105,18 +109,18 @@ Template.reservationTable.helpers({
             return true;
     },
 
-    isAdmin() {
+    isAdmin: function() {
         return userName() === 'admin';
     },
 
-    bookingUser(hour, slice) {
+    bookingUser: function(hour, slice) {
         const time = hour + ':' + slice;
         return Bookings.findOne({
             time: time
         }).name;
     },
 
-    countSelectedIds() {
+    countSelectedIds: function() {
         return Bookings.find({
             isSelected: true,
             name: userName()
@@ -127,14 +131,16 @@ Template.reservationTable.helpers({
         return ['05', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55']
     },
 
-    clickedNext() {
+    clickedNext: function() {
         return _clickedNext.get();
     },
-    formCompleted(){
+    formCompleted: function(){
         return _clickedSaveAns.get();
     }
 });
 
+
+//-----------------EVENTS-----------------------
 Template.home.events({
     'click td'(e) {
         const text = e.currentTarget.innerText;
