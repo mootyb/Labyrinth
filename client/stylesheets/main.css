@@ -16,32 +16,26 @@
 #book {
 	background: url('/assets/images/book2.png') no-repeat;
 	position: relative;
-	width: 1036px;
-	height: 606px;
+	width: 800px;
+	height: 585px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    left: 100px;
 	z-index: -98;
 }
 
 #pages section {
-	background: url('/assets/images/page1.png') no-repeat;
+	
 	display: block;
-	width: 1036px;
-	height: 750px;
+	width: 383px;
+	height: 585px;
 	position: absolute;
 	left: 15px;
 	top: 0px;
 	overflow: hidden;
 	z-index: -90;
 }
-	#pages section>div {
-		display: block;
-		width: 400px;
-		height: 250px;
-		font-size: 12px;
-	}
+
 
 #pageflip-canvas {
 	position: absolute;
@@ -54,7 +48,7 @@
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 	width: 100%;
-	bottom: 0;		
+	bottom: -5px;		
 	height: 120px;
 	z-index: 0;
 }
@@ -84,4 +78,12 @@ h4, h5, h2{
     height: auto;
     left:0px;
 	}
+}
+
+body{
+	height: 100%; 
+}
+
+#__blaze-root{
+	height: 100vh;  
 }
