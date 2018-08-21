@@ -4,18 +4,35 @@
         <div class="row">
             <div class="col-sm-6 block">
                 <h5>Add a new show.</h5>
-                {{> quickForm collection="Shows" id="createShowForm" type="insert"}}
-                <!--<input type="file" class="myFileInput">-->
-                <!--<input type="submit" value="Upload">-->
+                <!-- {{> quickForm collection="Shows" id="createShowForm" type="insert"}} -->
+                {{#autoForm collection="Shows" id="createShowForm" type="insert"}}
+                    {{> afQuickField name="title" autocomplete="off"}}
+                    {{> afQuickField name="summary" autocomplete="off"}}
+                    <!-- {{> afQuickField name="fileId" type="cfs-file" collection="images"}} -->
+                    <!-- <input type="file" class="myFileInput">
+                    <input type="submit" value="Upload"> -->
+                    <button type="submit">Submit</button>
+                {{/autoForm}}
+                {{> uploadForm}}
+
                 {{#if submittedS}}
                     <div class="alert alert-primary" role="alert">
                         The show was created successfully!
                     </div>
                 {{/if}}
             </div>
+
             <div class="col-sm-6 block">
                 <h5>Add a new representation for a show.</h5>
-                {{> quickForm collection="Representations" id="createRepresentationForm" type="insert"}}
+                {{#autoForm collection="Representations" id="createRepresentationForm" type="insert"}}
+                    {{> afQuickField name="labyrinth" autocomplete="off"}}
+                    {{> afQuickField name="date" autocomplete="off"}}
+                    {{> afQuickField name="startingTime" autocomplete="off"}}
+                    {{> afQuickField name="endingTime" autocomplete="off"}}
+                    {{> afQuickField name="location" autocomplete="off"}}
+                    <button type="submit">Submit</button>
+                {{/autoForm}}
+
                 {{#if submittedR}}
                     <div class="alert alert-primary" role="alert">
                         The representation was created successfully!
@@ -30,4 +47,27 @@
         <h5 class="align-center-nospace">Here you can view your personal chart, based on your experience in the labyrinth.</h5>
         <div class="ct-chart ct-golden-section" id="chart1"></div>
     {{/if}}
+</template>
+
+<!-- uploading an image for the event -->
+<template name="uploadForm">
+  {{#with currentUpload}}
+    Uploading <b>{{file.name}}</b>:
+    <span id="progress">{{progress.get}}%</span>
+  {{else}}
+    <input id="fileInput" type="file" />
+  {{/with}}
+</template>
+
+<!-- displaying the uploaded image -->
+<template name='file'>
+  <img src="{{imageFile.link}}" alt="{{imageFile.name}}" />
+  <!-- Same as: -->
+  <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
+  <hr>
+  <video height="auto" controls="controls">
+    <source src="{{videoFile.link}}?play=true" type="{{videoFile.type}}" />
+    <!-- Same as: -->
+    <!-- <source src="{{fileURL videoFile}}?play=true" type="{{videoFile.type}}" /> -->
+  </video>
 </template>

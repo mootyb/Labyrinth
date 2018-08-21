@@ -36,3 +36,4 @@ fortawesome:fontawesome
 #cfs:standard-packages
 #cfs:gridfs
 underscore                    #don't touch
+ostrio:files

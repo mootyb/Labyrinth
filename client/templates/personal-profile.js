@@ -1,4 +1,6 @@
-import {Representations, Shows} from "../../lib/collections";
+import {Representations, Shows, Images} from "../../lib/collections";
+import { Template }    from 'meteor/templating';
+import { ReactiveVar } from 'meteor/reactive-var';
 
 function userName() {
     return Meteor.user() && Meteor.user().username
@@ -8,6 +10,8 @@ const hasSubmittedS = new ReactiveVar(false);
 
 const hasSubmittedR = new ReactiveVar(false);
 
+
+// CHARTS
 function on(event, handler) {
     this.eventEmitter.addEventHandler(event, handler);
     return this;
@@ -45,6 +49,8 @@ function update(data, options, override) {
 }
 
 
+
+// FORMS
 Template['personal-profile'].helpers({
     isAdmin: function() {
         return userName() === 'admin';
@@ -160,4 +166,55 @@ Template['personal-profile'].onRendered(function () {
             ]
         })
     })
+});
+
+
+// UPLOADING FILES
+Template.uploadForm.onCreated(function () {
+  this.currentUpload = new ReactiveVar(false);
+});
+
+Template.uploadForm.helpers({
+  currentUpload() {
+    return Template.instance().currentUpload.get();
+  }
+});
+
+Template.uploadForm.events({
+  'change #fileInput'(e, template) {
+    if (e.currentTarget.files && e.currentTarget.files[0]) {
+      // We upload only one file, in case
+      // multiple files were selected
+      const upload = Images.insert({
+        file: e.currentTarget.files[0],
+        streams: 'dynamic',
+        chunkSize: 'dynamic'
+      }, false);
+
+      upload.on('start', function () {
+        template.currentUpload.set(this);
+      });
+
+      upload.on('end', function (error, fileObj) {
+        if (error) {
+          alert('Error during upload: ' + error);
+        } else {
+          alert('File "' + fileObj.name + '" successfully uploaded');
+        }
+        template.currentUpload.set(false);
+      });
+
+      upload.start();
+    }
+  }
+});
+
+//  DISPLAYING FILES
+Template.file.helpers({
+  imageFile() {
+    return Images.findOne();
+  },
+  videoFile() {
+    return Videos.findOne();
+  }
 });
