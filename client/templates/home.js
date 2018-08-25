@@ -29,6 +29,7 @@ function _isSelected(time) {
     })
 }
 
+
 function _isBooked(time) {
     return Bookings.findOne({
         time
@@ -44,6 +45,23 @@ function getSelectedIds() {
         isSelected: true,
         name: userName()
     }).fetch().map(b => b._id);
+}
+
+// function getSpectatorName(){
+//      return Bookings.find({
+//         name: userName()
+//     })
+// }
+
+function _getSelectedName(hour, slice){
+    const time = hour + ':' + slice;
+    return Bookings.findOne({
+        time: time
+    }).name;
+}
+
+function _isAdmin() {
+    return userName() === 'admin';
 }
 
 const _clickedNext = new ReactiveVar(false);
@@ -109,6 +127,14 @@ Template.reservationTable.helpers({
             return true;
     },
 
+    isConfirmedByAdmin: function(){
+        if (Bookings.find({
+            isConfirmedAdmin: true,
+            name: userName()
+        }))
+            return true;
+    }, ////XXXX CHECK LOGIC
+
     isAdmin: function() {
         return userName() === 'admin';
     },
@@ -144,22 +170,39 @@ Template.reservationTable.helpers({
 Template.home.events({
     'click td'(e) {
         const text = e.currentTarget.innerText;
-        if (!_isSelected(text)) {
-            if (!_isBooked(text)) {
-                let crrt_time = new Date();
-                Bookings.insert({
-                    time: text,
-                    name: Meteor.user().username,
-                    isBooked: false,
-                    isSelected: true,
-                    createdDate: crrt_time,
-                    repID: Representations.findOne({
-                        labyrinth: 'Test lab'
-                    })._id //XXX dynamic
-                });
-            }
-        }
-        //else { alert('Booking already being proccesed by someone else. Please try picking a different time.') }
+        // if (_isAdmin){
+        //     if (_isBooked(text)){
+        //         const idss = Bookings.find({
+        //         time: text
+        //         }).fetch().map(b => b._id);
+        //         for (id of idss) {
+        //             Bookings.update(id, {
+        //                 $set: {
+        //                     isConfirmedAdmin: true
+        //                 } ///XXX check logic
+        //             })
+        //         }
+        //     }
+        // }
+        
+        // else{
+            if (!_isSelected(text)) {
+                if (!_isBooked(text)) {
+                    let crrt_time = new Date();
+                    Bookings.insert({
+                        time: text,
+                        name: Meteor.user().username,
+                        isBooked: false,
+                        isSelected: true,
+                        createdDate: crrt_time,
+                        repID: Representations.findOne({
+                            labyrinth: 'Test lab'
+                        })._id //XXX dynamic
+                    });
+                }
+            }      
+        // }
+ //else { alert('Booking already being proccesed by someone else. Please try picking a different time.') }
     },
 
     'click td.bg-warning'(e) {

@@ -30,10 +30,16 @@
 	width: 383px;
 	height: 585px;
 	position: absolute;
-	left: 15px;
+	left: 403px;
 	top: 0px;
 	overflow: hidden;
 	z-index: -90;
+}
+
+.section-in {
+	overflow: hidden;
+	height: 100%;
+    width: 100%;
 }
 
 
