@@ -1,7 +1,10 @@
-
 <template name="labyrinths">
-    {{#each shows}}
-        <h4>{{title}}</h4>
-        <p>{{summary}}</p>
+	{{#each show in allShows}}
+	<div class="col-sm-6">
+        <h4>{{show.title}}</h4>
+        <p>{{show.summary}}</p>
+<!--          <h4>{{showTitle}}</h4>
+        <p>{{showSummary}}</p> -->
+    </div>
     {{/each}}
 </template>

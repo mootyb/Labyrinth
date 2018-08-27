@@ -4,16 +4,12 @@
         <div class="row">
             <div class="col-sm-6 block">
                 <h5>Add a new show.</h5>
-                <!-- {{> quickForm collection="Shows" id="createShowForm" type="insert"}} -->
                 {{#autoForm collection="Shows" id="createShowForm" type="insert"}}
                     {{> afQuickField name="title" autocomplete="off"}}
                     {{> afQuickField name="summary" autocomplete="off"}}
-                    <!-- {{> afQuickField name="fileId" type="cfs-file" collection="images"}} -->
-                    <!-- <input type="file" class="myFileInput">
-                    <input type="submit" value="Upload"> -->
+                    {{> afQuickField name = "image" autocomplete="off"}}
                     <button type="submit">Submit</button>
                 {{/autoForm}}
-                {{> uploadForm}}
 
                 {{#if submittedS}}
                     <div class="alert alert-primary" role="alert">
@@ -45,29 +41,16 @@
     {{else}}
         <h3 class="align-center">Welcome to your personal Asylum Labyrinth page</h3>
         <h5 class="align-center-nospace">Here you can view your personal chart, based on your experience in the labyrinth.</h5>
-        <div class="ct-chart ct-golden-section" id="chart1"></div>
+        <div class="chart-wrap"><div class="ct-chart ct-golden-section" id="chart1"></div></div>
+        <div class="definitions">
+            <h3>Center</h3>
+            <p>how present you are, how honest you are to yourself. </p>
+            <h3>Internal</h3>
+            <p>how you relate to yourself and to your own aptitudes, self-confidance, strength</p>
+            <h3>Relational</h3>
+            <p>how empathic you are and how strong your confidence towards others is</p>
+            <h3>External</h3>
+            <p>how open you are to new experiences or the unknown, spontaneity, courage</p>
+        </div>
     {{/if}}
-</template>
-
-<!-- uploading an image for the event -->
-<template name="uploadForm">
-  {{#with currentUpload}}
-    Uploading <b>{{file.name}}</b>:
-    <span id="progress">{{progress.get}}%</span>
-  {{else}}
-    <input id="fileInput" type="file" />
-  {{/with}}
-</template>
-
-<!-- displaying the uploaded image -->
-<template name='file'>
-  <img src="{{imageFile.link}}" alt="{{imageFile.name}}" />
-  <!-- Same as: -->
-  <!-- <img src="{{fileURL imageFile}}" alt="{{imageFile.name}}" /> -->
-  <hr>
-  <video height="auto" controls="controls">
-    <source src="{{videoFile.link}}?play=true" type="{{videoFile.type}}" />
-    <!-- Same as: -->
-    <!-- <source src="{{fileURL videoFile}}?play=true" type="{{videoFile.type}}" /> -->
-  </video>
 </template>

@@ -9,7 +9,7 @@
 	position: relative;
 	width:80%;
 	margin: auto;
-    margin-top: 40px;	
+    margin-top: 50px;	
     padding-bottom: 170px;
 }
 
@@ -63,9 +63,45 @@
 	padding-top: 20px;
 }
 
+.definitions h3{
+	padding-bottom: 5px;
+	text-align: left;
+}
+
+.definitions{
+	width:32%; 
+	float:right;
+	display: inline-block;
+	position:relative;
+	padding-top: 50px;
+
+}
+
 h5, h4, h3, h2{
 	text-align: center;
 	padding-bottom: 20px;
+}
+
+.full-width{
+	width:100%;
+	position: relative;
+}
+
+.up{
+	position: absolute;
+	width: 30%;
+	bottom: 0px;
+}
+
+.up p{
+	display: inline-block;
+}
+
+.chart-wrap{
+	width:60%; 
+	float:left;
+	padding-top: 50px;
+	padding-bottom: 150px;
 }
 
 .block{
@@ -78,12 +114,51 @@ h5, h4, h3, h2{
     display: block;
 }
 
+.col-sm-6{
+	display: inline-block;
+	float: left;
+	position: relative;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+}
+
+.col-sm-6 p{
+	text-align: center;
+}
+
 @media (max-width: 646px){
 	#book{
-	width:540px; /* you can use % */
+	width:540px; /* can use % */
     height: auto;
     left:0px;
 	}
+
+	.chart-wrap{
+	width:100%; 
+	float:left;
+	padding-bottom: 50px;
+	}
+
+	.definitions{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
+	.definitions h3{
+		text-align: center;
+	}
+
+	.col-sm-6{
+		padding-top: 0px;
+		padding-bottom: 100px;
+	}
+
+	.up{
+		left: 80px;
+	}
+
 }
 
 body{

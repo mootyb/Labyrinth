@@ -1,12 +1,19 @@
 <template name="home">
+    {{> currentShow}}
     {{#if currentUser}}
         {{> reservationTable}}
     {{/if}}
 </template>
 
 
+<template name="currentShow">
+    <h2>{{ showTitle }}</h2>
+    <p>{{ showSummary }}</p>
+    <img src="{{ showImage }}"/>
+</template>
+
 <template name="reservationTable">
-    <h5 class="align-center-nospace">Welcome! You can book a place in the upcoming labyrinth show.
+    <h5 class="align-center-nospace">You can book a place in the upcoming labyrinth show.
         But first, please create an account so we can later update your booking in case of need. </h5>
     {{#if bookingsAboutToExpire}}
         <div class="alert alert-primary" role="alert">

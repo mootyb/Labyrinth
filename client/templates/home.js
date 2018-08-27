@@ -3,11 +3,11 @@ import {Bookings, Representations, Shows} from "../../lib/collections";
 import SimpleSchema from "simpl-schema"
 SimpleSchema.debug = true;
 
-function _getClosestTepresentation(){
+function _getClosestRepresentation(){
     return Representations.find({
-        // date: {
-        //     $gt: new Date()
-        // }
+        date: {
+            $gt: new Date()
+        }
     },
         {
         sort: {
@@ -15,6 +15,18 @@ function _getClosestTepresentation(){
         },
         limit: 1
     }).fetch()[0]
+}
+
+function _getClosestShow(){
+    return Shows.findOne({
+        title: _getClosestRepresentation().labyrinth
+    })
+}
+
+function _getShows(){
+    return Shows.findOne({
+        title: _getClosestRepresentation().labyrinth
+    })
 }
 
 function userName() {
@@ -47,12 +59,6 @@ function getSelectedIds() {
     }).fetch().map(b => b._id);
 }
 
-// function getSpectatorName(){
-//      return Bookings.find({
-//         name: userName()
-//     })
-// }
-
 function _getSelectedName(hour, slice){
     const time = hour + ':' + slice;
     return Bookings.findOne({
@@ -68,8 +74,21 @@ const _clickedNext = new ReactiveVar(false);
 const _clickedSaveAns = new ReactiveVar(false);
 
 
-
 //--------------------HELPERS-----------------------
+
+Template.currentShow.helpers({
+    showTitle(){
+        return _getClosestShow().title
+    },
+    showImage(){
+        return _getClosestShow().image
+    },
+    showSummary(){
+        return _getClosestShow().summary
+    }
+})
+
+
 Template.reservationTable.helpers({
     userName, //included from the global function
 
@@ -94,10 +113,7 @@ Template.reservationTable.helpers({
     },
 
     representationHours: function () {
-        const rep = Representations.findOne({
-            labyrinth: 'Test lab'
-            //_getClosestTepresentation().name
-        }); //XXX
+        const rep = _getClosestRepresentation();
         const startHour = rep.startingTime.getHours();
         const endHour = rep.endingTime.getHours();
         const hours = [];
@@ -170,22 +186,22 @@ Template.reservationTable.helpers({
 Template.home.events({
     'click td'(e) {
         const text = e.currentTarget.innerText;
-        // if (_isAdmin){
-        //     if (_isBooked(text)){
-        //         const idss = Bookings.find({
-        //         time: text
-        //         }).fetch().map(b => b._id);
-        //         for (id of idss) {
-        //             Bookings.update(id, {
-        //                 $set: {
-        //                     isConfirmedAdmin: true
-        //                 } ///XXX check logic
-        //             })
-        //         }
-        //     }
-        // }
+        if (_isAdmin()){
+            if (_isBooked(text)){
+                const idss = Bookings.find({
+                time: text
+                }).fetch().map(b => b._id);
+                for (id of idss) {
+                    Bookings.update(id, {
+                        $set: {
+                            isConfirmedAdmin: true
+                        } ///XXX check logic
+                    })
+                }
+            }
+        }
         
-        // else{
+        else{
             if (!_isSelected(text)) {
                 if (!_isBooked(text)) {
                     let crrt_time = new Date();
@@ -195,14 +211,11 @@ Template.home.events({
                         isBooked: false,
                         isSelected: true,
                         createdDate: crrt_time,
-                        repID: Representations.findOne({
-                            labyrinth: 'Test lab'
-                        })._id //XXX dynamic
+                        repID: _getClosestRepresentation()._id
                     });
                 }
             }      
-        // }
- //else { alert('Booking already being proccesed by someone else. Please try picking a different time.') }
+        }
     },
 
     'click td.bg-warning'(e) {

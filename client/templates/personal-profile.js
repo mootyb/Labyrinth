@@ -169,52 +169,52 @@ Template['personal-profile'].onRendered(function () {
 });
 
 
-// UPLOADING FILES
-Template.uploadForm.onCreated(function () {
-  this.currentUpload = new ReactiveVar(false);
-});
+// // UPLOADING FILES
+// Template.uploadForm.onCreated(function () {
+//   this.currentUpload = new ReactiveVar(false);
+// });
 
-Template.uploadForm.helpers({
-  currentUpload() {
-    return Template.instance().currentUpload.get();
-  }
-});
+// Template.uploadForm.helpers({
+//   currentUpload() {
+//     return Template.instance().currentUpload.get();
+//   }
+// });
 
-Template.uploadForm.events({
-  'change #fileInput'(e, template) {
-    if (e.currentTarget.files && e.currentTarget.files[0]) {
-      // We upload only one file, in case
-      // multiple files were selected
-      const upload = Images.insert({
-        file: e.currentTarget.files[0],
-        streams: 'dynamic',
-        chunkSize: 'dynamic'
-      }, false);
+// Template.uploadForm.events({
+//   'change #fileInput'(e, template) {
+//     if (e.currentTarget.files && e.currentTarget.files[0]) {
+//       // We upload only one file, in case
+//       // multiple files were selected
+//       const upload = Images.insert({
+//         file: e.currentTarget.files[0],
+//         streams: 'dynamic',
+//         chunkSize: 'dynamic'
+//       }, false);
 
-      upload.on('start', function () {
-        template.currentUpload.set(this);
-      });
+//       upload.on('start', function () {
+//         template.currentUpload.set(this);
+//       });
 
-      upload.on('end', function (error, fileObj) {
-        if (error) {
-          alert('Error during upload: ' + error);
-        } else {
-          alert('File "' + fileObj.name + '" successfully uploaded');
-        }
-        template.currentUpload.set(false);
-      });
+//       upload.on('end', function (error, fileObj) {
+//         if (error) {
+//           alert('Error during upload: ' + error);
+//         } else {
+//           alert('File "' + fileObj.name + '" successfully uploaded');
+//         }
+//         template.currentUpload.set(false);
+//       });
 
-      upload.start();
-    }
-  }
-});
+//       upload.start();
+//     }
+//   }
+// });
 
-//  DISPLAYING FILES
-Template.file.helpers({
-  imageFile() {
-    return Images.findOne();
-  },
-  videoFile() {
-    return Videos.findOne();
-  }
-});
+// //  DISPLAYING FILES
+// Template.file.helpers({
+//   imageFile() {
+//     return Images.findOne();
+//   },
+//   videoFile() {
+//     return Videos.findOne();
+//   }
+// });

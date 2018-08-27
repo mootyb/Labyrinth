@@ -46,3 +46,102 @@ possibility to book without an account
 WHY???
 - x in modal not working
 -
+
+
+
+import {Shows} from "../../lib/collections";
+
+// import SimpleSchema from "simpl-schema"
+// SimpleSchema.debug = true;
+
+// function _getShows(){
+//     return Shows.find({})
+// }
+
+// //--------------------HELPERS-----------------------
+// Template.labyrinths.helpers({
+//     allShows: function(){
+//         show = Shows.find({})
+//         return show
+//     }
+//     // showTitle: function(){
+//     //     return _getShows().title
+//     // }
+//     // showSummary: function(){
+//     //     return _getShows().summary
+//     // }
+// });
+
+
+
+//    //  const showList[] = _getShows(); 
+//    //  for (var i = 0; i < Things.length; i++) {
+//    //      Things[i]
+//    //  };
+//    //  for (shows in showList){
+
+//    //  }
+//    //  const shows = Shows.find({});
+//    //  return shows;
+//    // }
+
+//         // const rep = ();
+//         // const startHour = rep.startingTime.getHours();
+//         // const endHour = rep.endingTime.getHours();
+//         // const hours = [];
+//         // let crrtHour = startHour;
+//         // while (crrtHour !== endHour) {
+//         //     hours.push(crrtHour);
+//         //     crrtHour++;
+//         // }
+//         // return hours;
+//    //  ,  title: function(){
+//    //  return Shows.find({});
+//    // },
+//    //    summary: function(){
+//    //  return Shows.find({});
+//    // }
+
+
+
+// //-----------------EVENTS-----------------------
+// Template.labyrinths.events({
+// });
+
+
+
+
+
+<!-- 
+<template name="labyrinths">
+     <thead>
+     <tr>
+      {{#each fetchColumnHeaders}}
+        {{> columnHeader }}
+      {{/each}}
+     </tr>
+   </thead>
+
+{{ #each CollectionData }}
+   <tbody>
+     <Tr class="object-row">
+      {{#each fetchColumnItems}}
+       {{> columnItem}}
+      {{/each}}
+     </tr>
+   </tbody>
+{{/each}}
+
+<template name="columnHeader">
+  <th>{{label}}</th>
+</template>
+
+<template name="columnItem">
+  <td>{{label}}</td>
+</template>
+    <!-- {{> show_labyrinths (shows)}} -->
+<!--     {{#each show in allShows}}
+        <h4>{{show.title}}</h4>
+        <p>{{show.summary}}</p>
+    {{/each}} -->
+</template> -->
