@@ -1,3 +1,19 @@
 <template name="single-show">
-
+<!-- {{#if isAdmin}} -->
+	<div clas="row">
+	    <div class="col-sm-6 block">
+	        <h4>{{show.title}}</h4>
+	        <p>{{show.summary}}</p>
+	    </div>
+	    <div class="col-sm-6 block">
+	        <img class="align-center" src="{{show.image}}"/>
+	        <h4>{{showName}}</h4>
+	        <p>{{showSummary}}</p>            
+	    </div>
+	    <!-- <button class="align-center delete btn btn-primary">Erase this show</button> -->
+        {{> quickRemoveButton collection="collection.Shows" _id=this._id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}
+	</div>
+<!-- {{else}}
+	  <h3>Sorry, you are not authorized to access this page.</h3>
+{{/if}} -->
 </template>

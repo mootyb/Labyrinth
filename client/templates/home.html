@@ -10,11 +10,18 @@
 
 
 <template name="currentShow">
-    <h2>{{ showTitle }}</h2>
-    <p>{{ showSummary }}</p>
-    <p>Location: {{ repLocation }}</p>
-    <p>Date: {{ repDate }}</p>
-    <img src="{{ showImage }}"/>
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Upcoming labyrinth: {{ showTitle }}</h2>
+            <p>{{ showSummary }}</p>
+            <p>Location: {{ repLocation }}</p>
+            <p>Date: {{ repDate }}</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{ showImage }}"/>
+            <img src="{{show.image}}"/>
+    </div>
+</div>
 </template>
 
 

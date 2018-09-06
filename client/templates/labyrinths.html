@@ -1,4 +1,5 @@
-<template name="labyrinths">
+<template name="labyrinths"> 
+    <div class="row">
 	{{#each show in allShows}}
 	<div class="col-sm-6">
         <h4>{{show.title}}</h4>
@@ -8,13 +9,14 @@
         <p>{{showSummary}}</p> -->
         {{#if isAdmin}}
     	    <div class="align-center">
-    			<button type="submit" class="lab-btn btn btn-primary">View details</button>
+                <a href="http://localhost:3000/:{{show.title}}" class="btn btn-info" role="button"><i class="fa fa-pencil"></i></a>
 <!--                 <button class="erase-btn btn btn-primary">Delete show</button> -->
                 {{> quickRemoveButton collection="collection.Shows" _id=this._id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}
             </div>
     	{{/if}}
     </div>
     {{/each}}
+</div>
 </template>
 
 <!-- <template name="labyrinths">
