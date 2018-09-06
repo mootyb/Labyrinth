@@ -3,8 +3,40 @@
 	<div class="col-sm-6">
         <h4>{{show.title}}</h4>
         <p>{{show.summary}}</p>
-<!--          <h4>{{showTitle}}</h4>
+        <img src="{{show.image}}"/>
+<!--     <h4>{{showTitle}}</h4>
         <p>{{showSummary}}</p> -->
+        {{#if isAdmin}}
+    	    <div class="align-center">
+    			<button type="submit" class="lab-btn btn btn-primary">View details</button>
+<!--                 <button class="erase-btn btn btn-primary">Delete show</button> -->
+                {{> quickRemoveButton collection="collection.Shows" _id=this._id onError=onError onSuccess=onSuccess beforeRemove=beforeRemove class="btn btn-danger"}}
+            </div>
+    	{{/if}}
     </div>
     {{/each}}
 </template>
+
+<!-- <template name="labyrinths">
+    <div class="row">
+        {{#each allShows}}
+            {{>show}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="show">
+    <div class="col-sm-6 block">
+        <h4>{{show.title}}</h4>
+        <p>{{show.summary}}</p>
+        <img class="align-center" src="{{show.image}}"/>
+        <h4>{{showTitle}}</h4>
+        <p>{{showSummary}}</p>
+        {{#if isAdmin}}
+            <div class="align-center">
+                <button type="submit" id="lab-btn" class="btn btn-primary">View details</button>
+                <button class="delete btn btn-primary">Erase this show</button>
+            </div>
+        {{/if}}
+    </div>
+</template> -->

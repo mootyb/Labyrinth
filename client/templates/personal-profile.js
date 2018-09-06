@@ -1,3 +1,4 @@
+"use strict";
 import {Representations, Shows, Images} from "../../lib/collections";
 import { Template }    from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
@@ -7,9 +8,7 @@ function userName() {
 }
 
 const hasSubmittedS = new ReactiveVar(false);
-
 const hasSubmittedR = new ReactiveVar(false);
-
 
 // CHARTS
 function on(event, handler) {
@@ -126,6 +125,7 @@ Template['personal-profile'].onRendered(function () {
         }]
     ];
 
+
     // Initialize a Bar chart in the container with the ID chart1
     graph = new Chartist.Bar('#chart1', data = {
         labels: ["Center", "Internal", "Relational", "External"],
@@ -135,11 +135,27 @@ Template['personal-profile'].onRendered(function () {
     }, options, responsiveOptions);
 
     this.autorun(function () {
-        const answers = Forms.findOne({
+        const answers1 = Forms.find({
             name: userName()
-        });
+        },
+        {
+            sort: {
+                "dateCreated": 1
+            },
+            limit: 1
+        }).fetch()[0];
 
-        if(!answers) {
+        const answers2 = Forms.find({
+            name: userName()
+        },
+        {
+            sort: {
+                "dateCreated": 1
+            },
+            limit: 1
+         }).fetch()[1];
+
+        if(!answers1) {
             return;
         }
 
@@ -147,26 +163,66 @@ Template['personal-profile'].onRendered(function () {
             return answer? 1 : 0;
         }
 
-        const
-            center = score(answers.answer1) + score(answers.answer2),
-            internal = score(answers.answer3) + score(answers.answer4),
-            relational = score(answers.answer5) + score(answers.answer6),
-            external = score(answers.answer7) + score(answers.answer8);
+        function distributedScore(answers){
+            var axis = [];
+                axis[0] = score(answers.answer1) + score(answers.answer2),
+                axis[1] = score(answers.answer3) + score(answers.answer4),
+                axis[2] = score(answers.answer5) + score(answers.answer6),
+                axis[3] = score(answers.answer7) + score(answers.answer8);
+            return axis;
+        }
 
         graph.update({
             labels: ["Center", "Internal", "Relational", "External"],
             series: [
-                [
-                    center,
-                    internal,
-                    relational,
-                    external
-                ],
-                [2,0,1,1],
+                distributedScore(answers1),
+                distributedScore(answers2)
             ]
-        })
-    })
+        });
+    });
 });
+
+// INITIIAL VERSION   // Initialize a Bar chart in the container with the ID chart1
+//     graph = new Chartist.Bar('#chart1', data = {
+//         labels: ["Center", "Internal", "Relational", "External"],
+//         series: [
+//             [0,0,0,0]
+//         ]
+//     }, options, responsiveOptions);
+
+//     this.autorun(function () {
+//         const answers = Forms.findOne({
+//             name: userName()
+//         });
+
+//         if(!answers) {
+//             return;
+//         }
+
+//         function score(answer) {
+//             return answer? 1 : 0;
+//         }
+
+//         const
+//             center = score(answers.answer1) + score(answers.answer2),
+//             internal = score(answers.answer3) + score(answers.answer4),
+//             relational = score(answers.answer5) + score(answers.answer6),
+//             external = score(answers.answer7) + score(answers.answer8);
+
+//         graph.update({
+//             labels: ["Center", "Internal", "Relational", "External"],
+//             series: [
+//                 [
+//                     center,
+//                     internal,
+//                     relational,
+//                     external
+//                 ],
+//                 [2,0,1,1],
+//             ]
+//         })
+//     })
+// });
 
 
 // // UPLOADING FILES

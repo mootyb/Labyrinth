@@ -4,6 +4,12 @@
 	position: absolute;
 	display: inline-block;
 }*/
+.align-center{
+	position: relative;
+	display: block;
+	margin: auto;
+	width:fit-content;
+}
 
 .wrapper{
 	position: relative;
@@ -88,7 +94,7 @@ h5, h4, h3, h2{
 }
 
 .up{
-	position: absolute;
+	position: relative;
 	width: 30%;
 	bottom: 0px;
 }
@@ -115,8 +121,6 @@ h5, h4, h3, h2{
 }
 
 .col-sm-6{
-	display: inline-block;
-	float: left;
 	position: relative;
 	padding-left: 50px;
 	padding-right: 50px;
@@ -125,6 +129,15 @@ h5, h4, h3, h2{
 
 .col-sm-6 p{
 	text-align: center;
+}
+
+.col-sm-6 img{
+	padding-bottom: 10px;
+	display: inline-block;
+	width: auto;
+	width: 100%;
+    margin: auto;
+
 }
 
 @media (max-width: 646px){
@@ -155,10 +168,6 @@ h5, h4, h3, h2{
 		padding-bottom: 100px;
 	}
 
-	.up{
-		left: 80px;
-	}
-
 }
 
 body{
@@ -167,4 +176,8 @@ body{
 
 #__blaze-root{
 	height: 100vh;  
+}
+
+.btn{
+	padding-bottom: 10px;
 }

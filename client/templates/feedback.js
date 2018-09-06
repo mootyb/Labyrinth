@@ -1,10 +1,42 @@
-// Template.testimonials.helpers({
-// )};
-// Template.testimonials.events({
-// });
+"use strict"
+import { Template }    from 'meteor/templating';
+import { ReactiveVar } from 'meteor/reactive-var';
 
+function userName() {
+    return Meteor.user() && Meteor.user().username
+}
+
+const pageAdd = new ReactiveVar(false);
+
+function userName() {
+    return Meteor.user().username;
+}
 
 //--------------------HELPERS-----------------------
+
+Template.feedback.helpers({
+
+	isAdmin: function() {
+        return userName() === 'admin';
+    },
+
+    pageAdded: function(){
+    	return pageAdd.get();
+    }
+
+});
+
+Template.feedback.events({
+
+	'click #book-btn'(){
+		var divv = document.getElementById('last-div');
+		// var content = document.createElement('div');
+		// // content.innerHTML = '<section style="background: url(\'/assets/images/p1.png\') no-repeat;"></section>';
+		// // divv.appendChild(content);
+		divv.insertAdjacentHTML('afterend', '<section style="background: url(\'/assets/images/p1.png\') no-repeat;"></section>');
+		pageAdd.set(true);
+    }
+});
 
 
  Template.feedback.onRendered(function () {
@@ -22,14 +54,12 @@
 		
 		// The canvas size equals to the book dimensions + this padding
 		var CANVAS_PADDING = 60;
-		
 		var page = 0;
 		
 		var canvas = document.getElementById( "pageflip-canvas" );
 		var context = canvas.getContext( '2d' );
 		
 		var mouse = { x: 0, y: 0 };
-		
 		var flips = [];
 		
 		var book = document.getElementById( "book" );
@@ -487,7 +517,7 @@
 			zoomLevel: function() {
 				return level;
 			}
-		}
+		};
 
 	})();
 

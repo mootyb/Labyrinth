@@ -2,6 +2,9 @@
     {{> currentShow}}
     {{#if currentUser}}
         {{> reservationTable}}
+    {{else}}
+        <h6>You can already book your place in the upcoming labyrinth show.
+        But first please create an account, so you can later update your booking in case of need directly in the application. </h6>
     {{/if}}
 </template>
 
@@ -9,12 +12,20 @@
 <template name="currentShow">
     <h2>{{ showTitle }}</h2>
     <p>{{ showSummary }}</p>
+    <p>Location: {{ repLocation }}</p>
+    <p>Date: {{ repDate }}</p>
     <img src="{{ showImage }}"/>
 </template>
 
+
 <template name="reservationTable">
-    <h5 class="align-center-nospace">You can book a place in the upcoming labyrinth show.
-        But first, please create an account so we can later update your booking in case of need. </h5>
+
+    {{#if tooManyBookings}}
+        <div class="alert alert-primary" role="alert">
+            You are only allowed to book 2 spots for a representation. 
+            If you would like to come with a group of friends, please ask them to create an account and book their spot separatly
+        </div>
+    {{/if}}
     {{#if bookingsAboutToExpire}}
         <div class="alert alert-primary" role="alert">
             Your booking is about to expire in less than 1 minute.
@@ -25,7 +36,6 @@
             Your booking expired. Please choose your place again and press "Submit".
         </div>
     {{/if}}
-
     {{#if formCompleted}}
         <div class="alert alert-primary" role="alert">
             Thank you! Your answers have been registered.
@@ -44,12 +54,22 @@
         {{#each slice in timeSlices}}
             <tr>
                 {{#each hours in representationHours}}
-                    <td class="{{#if isSelected hours slice}}bg-warning{{/if}} {{#if isBooked hours slice}}bg-secondary{{/if}}">
+                    <td class="{{#if isSelected hours slice}}bg-warning{{/if}} {{#if isBookedByUser hours slice}}bg-success{{/if}} {{#if isBooked hours slice}}bg-secondary{{/if}} {{#if isConfirmedAdmin hours slice}}bg-info{{/if}}">
                         {{hours}}:{{slice}}
                         {{#if isAdmin}}
                             {{bookingUser hours slice}}
                         {{/if}}
                     </td>
+<!--                 {{#if isAdmin}}
+                        <td class="{{#if isBooked hours slice}}bg-secondary{{/if}}{{#if isBookedByUser hours slice}}bg-success{{/if}} {{#if isConfirmedAdmin hours slice}}bg-info{{/if}}">
+                        {{hours}}:{{slice}}
+                        {{bookingUser hours slice}}
+                        </td>
+                    {{else}}
+                         <td class="{{#if isSelected hours slice}}bg-warning{{/if}} {{#if isBookedByUser hours slice}}bg-success{{/if}} {{#if isBooked hours slice}}bg-secondary{{/if}} ">
+                        {{hours}}:{{slice}}
+                          </td>
+                    {{/if}} -->
                     <!--/* aka   $(e.target).closest('.table td').addClass('bg-warning'); //XXX-->
                 {{/each}}
             </tr>
@@ -58,52 +78,53 @@
     </table>
     <!-- Button trigger modal -->
     <button id="createObject" type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal">
-        Submit
+        Save selected spots
     </button>
-
+    <button id="btn-eraseObject" type="button" class="btn btn-primary">
+        Erase selected spots
+    </button>
     <!-- Modal -->
 
     {{ #if isConfirmedByAdmin }}
-    <div class="modal fade" id="formModal2" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        Answer honestly.
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div> 
-                <div class="modal-body"> 
-                    <p>We hope you had a good experience. Take a minute to answer the questions again and check your prsonal profile to see if there is any change in your 4 personal axes.</p>
-                    <!-- XXXX CHECK LOGIC UNDER, ID FORM -->
-                    {{#autoForm collection="Forms" id="sendAnswersForm3" type="insert"}} 
-                        <fieldset>
-                            {{> afQuickField name="answer1" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer2" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer3" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer4" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer5" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer6" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer7" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                            {{> afQuickField name="answer8" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
-                        </fieldset>
-                        <div class="modal-footer">
-                            <button type="button" id="btn-cancel-booking2" class="btn btn-secondary" data-dismiss="modal">
-                                Cancel
-                            </button>
-                            <button type="submit" id="btn-save-answers2" class="btn btn-primary">
-                                Save
-                            </button>
-                        </div>
-                    {{/autoForm}}
+        <div class="modal fade" id="formModal2" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            Answer honestly.
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div> 
+                    <div class="modal-body"> 
+                        <p>We hope you had a good experience. Take a minute to answer the questions again and check your prsonal profile to see if there is any change in the 4 main axes.</p>
+                        <!-- XXXX CHECK LOGIC UNDER, ID FORM -->
+                        {{#autoForm collection="Forms" id="sendAnswersForm2" type="insert"}} 
+                            <fieldset>
+                                {{> afQuickField name="answer1" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer2" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer3" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer4" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer5" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer6" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer7" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                                {{> afQuickField name="answer8" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
+                            </fieldset>
+                            <div class="modal-footer">
+                                <button type="button" id="btn-cancel-booking2" class="btn btn-secondary" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" id="btn-save-answers2" class="btn btn-primary">
+                                    Save
+                                </button>
+                            </div>
+                        {{/autoForm}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
     {{ /if }}
 
     <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -175,7 +196,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    {{#autoForm collection="Forms" id="sendAnswersForm2" type="insert"}}
+                    {{#autoForm collection="Forms" id="sendAnswersForm" type="insert"}}
                         <fieldset>
                             {{> afQuickField name="answer1" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}
                             {{> afQuickField name="answer2" type="boolean-radios" trueLabel="Yes" falseLabel="No"}}

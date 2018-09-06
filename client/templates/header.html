@@ -12,7 +12,7 @@
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/about">About us<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/labyrinths">Repertory<span class="sr-only">(current)</span></a>
@@ -21,9 +21,15 @@
                         <a class="nav-link" href="/feedback">Testimonials <span class="sr-only">(current)</span></a>
                     </li>
                     {{#if currentUser}}
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/personal-profile">My profile <span class="sr-only">(current)</span></a>
-                        </li>
+                         {{#if isAdmin}}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/personal-profile">Control Panel <span class="sr-only">(current)</span></a>
+                            </li>
+                        {{else}}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/personal-profile">My profile <span class="sr-only">(current)</span></a>
+                            </li>
+                        {{/if}}
                     {{/if}}
                 </ul>
             </div>

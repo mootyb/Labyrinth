@@ -21,7 +21,6 @@ autopublish@1.0.7             # Publish all data to the clients (for prototyping
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 accounts-ui@1.3.0
 accounts-password@1.5.1
-accounts-facebook@1.3.1
 alanning:roles
 accounts-base@1.4.2
 #runisland:static-assets
@@ -37,3 +36,4 @@ fortawesome:fontawesome
 #cfs:gridfs
 underscore                    #don't touch
 ostrio:files
+aldeed:delete-button

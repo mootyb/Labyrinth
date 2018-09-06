@@ -17,13 +17,20 @@ function _getClosestRepresentation(){
     }).fetch()[0]
 }
 
-function _getClosestShow(){
-    return Shows.findOne({
-        title: _getClosestRepresentation().labyrinth
-    })
+function _getLatestBooking(){
+    return Bookings.find({
+        name: userName(),
+        isConfirmedUser: false
+    },
+        {
+        sort: {
+            "createdDate": 1
+        },
+        limit: 1
+    }).fetch()[0]
 }
 
-function _getShows(){
+function _getClosestShow(){
     return Shows.findOne({
         title: _getClosestRepresentation().labyrinth
     })
@@ -37,14 +44,28 @@ function _isSelected(time) {
     return Bookings.findOne({
         time,
         name: userName(),
-        isBooked: false
+        isSelected: true
     })
 }
-
 
 function _isBooked(time) {
     return Bookings.findOne({
         time
+    })
+}
+
+function _isBookedByUser(time){
+    return Bookings.findOne({
+        time,
+        name: userName(),
+        isConfirmedUser: true
+    })
+}
+
+function _isConfirmedAdmin(time){
+    return Bookings.findOne({
+        time,
+        isConfirmedAdmin: true
     })
 }
 
@@ -55,6 +76,24 @@ function next(val) {
 function getSelectedIds() {
     return Bookings.find({
         isSelected: true,
+        isConfirmedUser: false,
+        name: userName()
+    }).fetch().map(b => b._id);
+}
+
+function _countSelectedIds() {
+    return Bookings.find({
+        isSelected: true,
+        isConfirmedUser: false,
+        name: userName()
+    }).count();
+}
+
+
+function getSelectedBookedIds() {
+    return Bookings.find({
+        isSelected: true,
+        isConfirmedUser: true,
         name: userName()
     }).fetch().map(b => b._id);
 }
@@ -67,7 +106,7 @@ function _getSelectedName(hour, slice){
 }
 
 function _isAdmin() {
-    return userName() === 'admin';
+    return !!(userName() === 'admin');
 }
 
 const _clickedNext = new ReactiveVar(false);
@@ -85,19 +124,35 @@ Template.currentShow.helpers({
     },
     showSummary(){
         return _getClosestShow().summary
+    },
+    repLocation(){
+        return _getClosestRepresentation().location
+    },
+    repDate(){
+        return _getClosestRepresentation().date.getUTCDate() + " / " 
+        + _getClosestRepresentation().date.getUTCMonth() + " / " 
+        + _getClosestRepresentation().date.getFullYear()
     }
-})
+});
+
 
 
 Template.reservationTable.helpers({
     userName, //included from the global function
+
+    tooManyBookings:function() { ////XXXX NOT WORKING
+       const unbook = _getLatestBooking()
+        unbook.remove();
+       return !!(_countSelectedIds >= 3)
+    },
+
 
     bookingsAboutToExpire:function() {
         const fourMinutesAgo = new Date(new Date().getTime() - 4 * 60000)
         return !!(Bookings.findOne({ // "!!" converts to boolean
             name: userName(),
             isSelected: true,
-            isBooked: false,
+            isConfirmedUser: false,
             createdDate: {$lte: fourMinutesAgo}
         }))
     },
@@ -107,7 +162,7 @@ Template.reservationTable.helpers({
         return !!(Bookings.findOne({
             name: userName(),
             isSelected: true,
-            isBooked: false,
+            isConfirmedUser: false,
             createdDate: {$lte: fiveMinutesAgo} //booking created less than 5 minutes ago
         }))
     },
@@ -134,6 +189,11 @@ Template.reservationTable.helpers({
         return _isBooked(time)
     },
 
+    isBookedByUser: function(hour, slice){
+        const time = hour + ':' + slice;
+        return _isBookedByUser(time)
+    },
+
     //if the current user has only confirmed bookings
     hasSaved: function() {
         if (Bookings.find({
@@ -141,6 +201,11 @@ Template.reservationTable.helpers({
             name: userName()
         }).count() === 0)
             return true;
+    },
+
+    isConfirmedAdmin: function (hour,slice) {
+        const time = hour + ':' + slice;
+        return _isConfirmedAdmin(time)
     },
 
     isConfirmedByAdmin: function(){
@@ -152,7 +217,7 @@ Template.reservationTable.helpers({
     }, ////XXXX CHECK LOGIC
 
     isAdmin: function() {
-        return userName() === 'admin';
+        return !!(userName() === 'admin');
     },
 
     bookingUser: function(hour, slice) {
@@ -186,43 +251,76 @@ Template.reservationTable.helpers({
 Template.home.events({
     'click td'(e) {
         const text = e.currentTarget.innerText;
+        //confirm that visitor arrived to the representation and trigger second modal
         if (_isAdmin()){
             if (_isBooked(text)){
-                const idss = Bookings.find({
+                const id = Bookings.findOne({
                 time: text
-                }).fetch().map(b => b._id);
-                for (id of idss) {
+                })._id
                     Bookings.update(id, {
                         $set: {
                             isConfirmedAdmin: true
                         } ///XXX check logic
                     })
-                }
             }
         }
         
         else{
+            //create booking
             if (!_isSelected(text)) {
                 if (!_isBooked(text)) {
                     let crrt_time = new Date();
                     Bookings.insert({
                         time: text,
                         name: Meteor.user().username,
-                        isBooked: false,
-                        isSelected: true,
                         createdDate: crrt_time,
                         repID: _getClosestRepresentation()._id
                     });
+                }
+                else
+                {
+                    //reselect after booking confirmation
+                    if (_isBookedByUser(text)) {
+                        const id = Bookings.findOne({
+                            time: text
+                        })._id
+                        Bookings.update(id, {
+                            $set: {
+                                isSelected: true
+                                // ,isConfirmedUser: false
+                            }
+                        })
+                    }
                 }
             }      
         }
     },
 
     'click td.bg-warning'(e) {
+        const text = e.currentTarget.innerText;
         const id = Bookings.findOne({
-            time: e.currentTarget.innerText
+            time: text
         })._id
-        Bookings.remove(id);
+        if(!_isBookedByUser(text))
+            Bookings.remove(id);
+        else
+            Bookings.update(id,{
+            $set: {
+                isSelected: false
+            }
+        });
+    },
+
+    'click td.bg-success'(e) {
+        const text = e.currentTarget.innerText;
+        const id = Bookings.findOne({
+            time: text
+        })._id
+        Bookings.update(id,{
+            $set: {
+                isSelected: true
+            }
+        });
     },
 
     'click #btn-save-booking'() {
@@ -230,11 +328,22 @@ Template.home.events({
         for (id of ids) {
             Bookings.update(id, {
                 $set: {
-                    isBooked: true,
+                    // isBooked: true,
                     isSelected: false,
                     isConfirmedUser: true
                 }
             })
+        }
+    },
+
+    'click #btn-eraseObject'(){
+        const ids2 = getSelectedBookedIds();
+        for (id of ids2){
+            Bookings.remove(id);
+        }
+        const ids = getSelectedIds();
+        for (id of ids) {
+            Bookings.remove(id)
         }
     },
 
@@ -254,11 +363,11 @@ Template.home.events({
     }
 });
 
-
-AutoForm.addHooks('sendAnswersForm2', {
+AutoForm.addHooks('sendAnswersForm', {
     before: {
         insert(doc) {
             doc.name = userName();
+            doc.dateCreated = new Date();
             return doc;
         }
     },
@@ -270,6 +379,20 @@ AutoForm.addHooks('sendAnswersForm2', {
     }
 });
 
+AutoForm.addHooks('sendAnswersForm2', {
+    before: {
+        insert(doc) {
+            doc.name = userName();
+            doc.dateCreated = newDate();
+            return doc;
+        }
+    },
+    after: {
+        insert() {
+            $('#formModal2').modal('hide');
+        }
+    }
+});
 // aka 'click #createObject': function () {
 //     const answer = confirm(`You are going to book ${Bookings.find({
 //         isSelected: true,

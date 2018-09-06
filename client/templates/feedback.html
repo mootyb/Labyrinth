@@ -11,9 +11,21 @@
 				</section>
 				<section style="background: url('/assets/images/p3.png') no-repeat;">
 				</section>
-				<section style="background: url('/assets/images/p4.png') no-repeat;">
-				</section>
+				<div id="last-div">
+					<section style="background: url('/assets/images/p4.png') no-repeat;">
+					</section>
+				</div>
 			</div>
 		</div>
+	{{#if isAdmin}}
+	    <div class="container-fluid">
+		    {{#if pageAdded}}
+		        <div class="alert alert-primary" role="alert">
+		            The page was uploaded succesfully!
+		        </div>
+			{{/if}}
+			<button type="submit" id="book-btn" class="btn btn-primary">Add a page</button>
+		</div>
+	{{/if}}
 
 </template>
